@@ -1,0 +1,123 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css"><title>Related Records – Keyuri Tatu</title><meta name="description" content="A greenfield parent-child feature for OpenGov's permitting software: linking permits, licenses and complaints so their workflows, data and people can work together."></head><body><header><a href="/">Keyuri Tatu</a><nav><a href="/#work">Case studies</a></nav></header><main><article>
+
+<span class="year">OpenGov · Permitting &amp; Licensing</span>
+<h1 class="cs">Related Records</h1>
+<p class="lede">Teaching permits, licenses and complaints to talk to each other. A year-long, greenfield parent-child feature for OpenGov’s permitting software.</p>
+
+<figure><a href="/media/rr-01-related-records-tab.webp" target="_blank" rel="noopener"><img src="/media/rr-01-related-records-tab.webp" alt="The Related Records tab on a building permit, showing a tree of related permits with relationship icons and filters" width="1920" height="1080" decoding="async"></a><figcaption>The Related Records tab on a permit: a tree of linked records, filters for how they depend on each other, and a count on the tab.</figcaption></figure>
+
+<dl class="meta">
+<div><dt>Role</dt><dd>Lead Product Designer</dd></div>
+<div><dt>Team</dt><dd>1 Product Manager<br>1 Front-end engineer<br>1 Back-end engineer</dd></div>
+<div><dt>Timeline</dt><dd>About a year<br>Greenfield feature</dd></div>
+<div><dt>Company</dt><dd>OpenGov, Permitting &amp; Licensing (PLC)</dd></div>
+</dl>
+
+<div class="stats">
+<div><b>24</b><span>user interviews, over three rounds</span></div>
+<div><b>10</b><span>communities represented in the research</span></div>
+<div><b>5</b><span>use cases the feature had to serve</span></div>
+<div><b>4</b><span>Figma files and hundreds of screens, from first sketch to final flow</span></div>
+</div>
+
+<h2>Overview</h2>
+<p>In OpenGov’s permitting software, everything is a record: a permit, a license, a complaint. But at a high level, those records did not talk to each other. A building permit could not know that its electrical, plumbing and mechanical permits were still waiting, and staff had to keep track of it themselves.</p>
+<p>Customers had been asking for this through every channel we had, from our ideas portal to sales and professional services calls. It had sat on the roadmap for a while but kept falling off. As OpenGov moved up-market, having records share information became table stakes. I designed Related Records, a way to link records as parents and children, automate those links, share information between them and sequence their workflows.</p>
+
+<h2>Problem</h2>
+<p>We failed with larger communities that use PLC across departments. A construction project needs a primary permit and several child permits. A music festival can need a dozen. People had built clever workarounds because the product gave them no way to relate records:</p>
+<ul>
+<li><strong>Projects did not work.</strong> “A project to me is nothing more than a parent.” It was a tag at the top of a record that you still had to apply by hand to everything.</li>
+<li><strong>Workflows were siloed.</strong> Parent records have to wait for child permits: “We only issue the C of O (Certificate of Occupancy) after other permits on the property have been issued.” Staff could not see that from the record itself.</li>
+<li><strong>Dependent work was hard to find.</strong> The Location tab only listed records at the exact same address.</li>
+<li><strong>Dependencies were tracked by hand,</strong> with sticky notes, phone calls and emails about which permits a project required.</li>
+</ul>
+<div class="grid g2">
+<figure><a href="/media/rr-08-siloed-workflows.webp" target="_blank" rel="noopener"><img src="/media/rr-08-siloed-workflows.webp" alt="Siloed workflows: parent records need to wait for child permits to be approved" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-09-finding-dependent-workflows.webp" target="_blank" rel="noopener"><img src="/media/rr-09-finding-dependent-workflows.webp" alt="Finding dependent workflows through the Location tab only shows records at the same address" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-10-manual-dependencies.webp" target="_blank" rel="noopener"><img src="/media/rr-10-manual-dependencies.webp" alt="Manually tracking dependencies between records" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-03-what-we-knew.webp" target="_blank" rel="noopener"><img src="/media/rr-03-what-we-knew.webp" alt="What we knew: we fail with larger communities, customers want trees of records, users build workarounds, requirements are discussed over the phone" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h2>Research</h2>
+<p>I started with what the company already knew: interviews with customer success, professional services, implementation and sales engineering, comments on our ideas portal, and recordings of past sales calls. Then I went to users, with 24 interviews across three rounds, averaging 58 minutes each and covering ten communities. Participants came from recommendations by professional services, customer success and project managers, and from volunteers who opted in at our quarterly webinar.</p>
+<p>My interview script started from the gaps in what we knew. I wrote down everything I wanted to learn in discovery, synthesized in Miro with a lot of tagged data, and wrote up the results.</p>
+<figure><a href="/media/rr-02-research-plan.webp" target="_blank" rel="noopener"><img src="/media/rr-02-research-plan.webp" alt="Research plan: learn from what we know, talk to users, validate with users" width="1920" height="1080" loading="lazy" decoding="async"></a><figcaption>The research plan: start with existing knowledge, then interviews, then validation with usability tests.</figcaption></figure>
+
+<h2>Key insight: a family of needs, not one feature</h2>
+<p>Five use cases covered nearly everything we heard: special event permits that need many linked permits, construction projects with a primary permit and child permits, retail and business permits at mall, building and unit level, integrations that turn permits and inspections into tasks in an asset management system (snow removal was one example), and combined fees so an applicant pays once.</p>
+<p>Behind them sat five goals: required records, permit hierarchy, bulk permit and license tracking, task dependencies, and payment aggregation. The insight was that this was not one feature. Trying to solve everything at once led to some thought paralysis on my side, so I broke the problem down before designing anything.</p>
+<div class="grid g2">
+<figure><a href="/media/rr-04-use-cases.webp" target="_blank" rel="noopener"><img src="/media/rr-04-use-cases.webp" alt="Use cases: special event permits, construction projects, retail and business, integration with existing systems, fee management and payment" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-05-user-goals.webp" target="_blank" rel="noopener"><img src="/media/rr-05-user-goals.webp" alt="User goals: record requirement, permit hierarchy, bulk permit and license tracking, task dependencies, payment aggregation" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+<p>I split users into four groups, the quick-linkers, the organizers, the builders and the designers, each with its own goal and example scenario. Then I listed tangible tasks, started with user journeys, and mapped how records would talk to each other before opening a screen.</p>
+<div class="grid g1">
+<figure><a href="/media/rr-06-user-groups.webp" target="_blank" rel="noopener"><img src="/media/rr-06-user-groups.webp" alt="Four user groups: the quick-linkers, the organizers, the builders and the designers" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h2>Planning: pause, then buckets</h2>
+<p>After the research I paused to plan. I grouped the work into four buckets, a word I used a lot: ad-hoc linked records, automated linked records, form mapping, and enhanced projects. Each milestone tracked research status, design status, engineering status and a design confidence score, so we could see where the risk was.</p>
+<div class="grid g2">
+<figure><a href="/media/rr-11-four-buckets.webp" target="_blank" rel="noopener"><img src="/media/rr-11-four-buckets.webp" alt="Four buckets: ad-hoc linked records, automated linked records, form mapping, enhanced projects" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-12-milestone-planning.webp" target="_blank" rel="noopener"><img src="/media/rr-12-milestone-planning.webp" alt="Milestone planning with research, design, engineering status and design confidence" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h2>Design</h2>
+<p>I broke the design into micro-journeys: displaying related records, creating a relationship, relationship templates and projects.</p>
+
+<h3>Displaying related records</h3>
+<p>I compared a graph, a tree and a list, and a tree-and-list hybrid. The tree was overwhelming at scale, and the list was easier to understand. For where related records should live, I tested a separate tab against showing them inside the workflow, in the interviews themselves.</p>
+<div class="grid g1">
+<figure><a href="/media/rr-13-graph-tree-list.webp" target="_blank" rel="noopener"><img src="/media/rr-13-graph-tree-list.webp" alt="Graph versus tree versus list explorations" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-14-tree-plus-list.webp" target="_blank" rel="noopener"><img src="/media/rr-14-tree-plus-list.webp" alt="Tree plus list: the tree is overwhelming, the list is easier to understand" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-15-tab-or-workflow.webp" target="_blank" rel="noopener"><img src="/media/rr-15-tab-or-workflow.webp" alt="Where associated records live: in a separate tab or in the workflow with no tab" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+<p>Where I landed: a separate tab with a count, quick filters with a legend (information shared, blocks this record, waiting for this record), the upstream record called out, and icons that show each relationship at a glance. The row metadata is reused from Global Search, so a record looks the same wherever you meet it. I also designed for records with more than one parent, for opening a record’s details and its relationship from the list, and for mobile.</p>
+<div class="grid g1">
+<figure><a href="/media/rr-16-where-i-landed.webp" target="_blank" rel="noopener"><img src="/media/rr-16-where-i-landed.webp" alt="Where I landed: separate tab with count, quick filters and legend, upstream record, icons showing relationships, metadata reused from Global Search" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+<div class="grid g3">
+<figure><a href="/media/rr-17-multiple-parents.webp" target="_blank" rel="noopener"><img src="/media/rr-17-multiple-parents.webp" alt="What if there are multiple parents" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-19-relationship-details.webp" target="_blank" rel="noopener"><img src="/media/rr-19-relationship-details.webp" alt="Details of a related record and its relationship in a side panel" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-18-mobile.webp" target="_blank" rel="noopener"><img src="/media/rr-18-mobile.webp" alt="Related Records on mobile" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h3>Creating a relationship</h3>
+<p>To create a relationship, we needed the user to tell us five things: which record type, under what conditions (only for automated relationships), who the users are, whether to copy information, and whether the workflows depend on each other. I explored a page against a modal and finalized a guided modal flow. The empty state suggests records at the same location to quick-add. Then four steps: when the relationship should be created, which users to add (users from the parent are copied by default, to give people a head start), what information to copy, and whether there are dependencies between the records, using the language staff already use.</p>
+<div class="grid g1">
+<figure><a href="/media/rr-20-what-we-need-from-user.webp" target="_blank" rel="noopener"><img src="/media/rr-20-what-we-need-from-user.webp" alt="What we needed the user to tell us: record type, conditions, users, copy information, dependent workflows" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-23-empty-state.webp" target="_blank" rel="noopener"><img src="/media/rr-23-empty-state.webp" alt="Finalized empty state, showing records the user might want to quick add" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+<div class="grid g2">
+<figure><a href="/media/rr-24-step-1-when.webp" target="_blank" rel="noopener"><img src="/media/rr-24-step-1-when.webp" alt="Step 1: when should this relationship be created" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-25-step-2-users.webp" target="_blank" rel="noopener"><img src="/media/rr-25-step-2-users.webp" alt="Step 2: which users should be added to the record" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-26-step-3-copy.webp" target="_blank" rel="noopener"><img src="/media/rr-26-step-3-copy.webp" alt="Step 3: would the user like to copy information" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-27-step-4-dependencies.webp" target="_blank" rel="noopener"><img src="/media/rr-27-step-4-dependencies.webp" alt="Step 4: are there any dependencies between the records" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h3>Automation and templates</h3>
+<p>An automation can be set up in settings, with conditions for when a child record should be created, and forms can be mapped so that field entries in a parent are shared with its children.</p>
+<div class="grid g2">
+<figure><a href="/media/rr-21-automation-settings.webp" target="_blank" rel="noopener"><img src="/media/rr-21-automation-settings.webp" alt="Creating an automation in settings, with conditions for child record creation" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/rr-22-form-field-sharing.webp" target="_blank" rel="noopener"><img src="/media/rr-22-form-field-sharing.webp" alt="Form fields can be automated to share entries between parent and child records" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h3>Projects, later</h3>
+<p>Our users are creative, so I held projects back on purpose. I wanted to see how people used Related Records before we put a bigger concept on top of it. In the meantime I prototyped a project dashboard to keep the conversation going.</p>
+<figure><a href="/media/rr-28-initial-projects-prototype.webp" target="_blank" rel="noopener"><img src="/media/rr-28-initial-projects-prototype.webp" alt="An initial prototype of a project dashboard with a timeline, records, open approvals and inspections" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+
+<h2>Results</h2>
+<p>This project is greenfield, and many of the improvements are qualitative, so I won’t dress it up. The measures below are where we are, and I’ve noted what is not measured yet.</p>
+<p><strong>It worked in users’ hands.</strong> I ran a usability test with five participants on five tasks, covering adding a new related record, quick-adding, adding an existing record as related, navigating the tab and editing a relationship, and editing a workflow blocker. Then a developer and I went to a customer user group, where a customer volunteered to set up a related record live. She did it smoothly, talked through the experience, and understood the interface.</p>
+<figure><a href="/media/rr-29-usability-test.webp" target="_blank" rel="noopener"><img src="/media/rr-29-usability-test.webp" alt="Usability test: 5 interviews and 5 tasks, with the discussion guide" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<p><strong>A measurement plan.</strong> We expect more ad-hoc related records, more relationship templates in larger communities, fewer combo-permits, fewer phone and email questions about requirements, and faster processing of permits and licenses. What we can measure today is the number of workflow steps per record and the number of change requests, both ideally falling. We do not yet measure time to complete a workflow step. Usage tracking runs through Fullstory.</p>
+<figure><a href="/media/rr-30-kpis-honest-answer.webp" target="_blank" rel="noopener"><img src="/media/rr-30-kpis-honest-answer.webp" alt="KPIs, the honest answer: what we expect and what we could measure" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+
+<h2>What I’d do differently</h2>
+<p><strong>Ask the UX team for feedback earlier.</strong> I could have proactively sought more design feedback, which would have helped me refine faster.</p>
+<p><strong>Respect the scale.</strong> With four Figma files and hundreds of screens, this was a very large undertaking. I’d break it down more aggressively from the start.</p>
+<p><strong>Document edge cases as I go.</strong> I’d keep an edge-case log alongside the designs, not after.</p>
+<p>What I’m glad about: when the PM changed mid-project, the engineering lead and I kept the team stable and the work moving. And watching a customer move through a flow we had been nervous about, without trouble.</p>
+
+</article></main></body></html>
