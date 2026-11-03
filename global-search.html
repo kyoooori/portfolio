@@ -1,0 +1,114 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css"><title>Global Search – Keyuri Tatu</title><meta name="description" content="Redesigning the most-used and most-complained-about feature in OpenGov's permitting software. Faster paths to records and locations, shipped in three months."></head><body><header><a href="/">Keyuri Tatu</a><nav><a href="/#work">Case studies</a></nav></header><main><article>
+
+<span class="year">2023–24</span>
+<h1 class="cs">Global Search</h1>
+<p class="lede">Redesigning the most-used and most-complained-about feature in OpenGov’s permitting software, so staff reach the right record or location faster.</p>
+
+<figure><a href="/media/gs-16-filters.webp" target="_blank" rel="noopener"><img src="/media/gs-16-filters.webp" alt="The new search: filters for records, locations, people and projects, with a preview panel beside the results" width="1920" height="1080" decoding="async"></a><figcaption>The new search, with filters by object type and a preview panel.</figcaption></figure>
+
+<dl class="meta">
+<div><dt>Role</dt><dd>Lead Product Designer<br>(solo designer)</dd></div>
+<div><dt>Team</dt><dd>1 Product Manager<br>1 Front-end engineer<br>1 Back-end engineer</dd></div>
+<div><dt>Timeline</dt><dd>3 months, shipped</dd></div>
+<div><dt>Users</dt><dd>Administrators<br>IT heads<br>Permit techs<br>Inspectors</dd></div>
+<div><dt>Company</dt><dd>OpenGov, Permitting &amp; Licensing (PLC)</dd></div>
+</dl>
+
+<div class="stats">
+<div><b>35s</b><span>median time from search to a location page, down from 1m 7s</span></div>
+<div><b>15s</b><span>median time from search to a record, down from 25s</span></div>
+<div><b>79.1%</b><span>of accounts using search, up from 74% (Oct 2023 vs Oct 2024)</span></div>
+<div><b>1.01M</b><span>search clicks in a month, up from 912K</span></div>
+</div>
+
+<h2>Overview</h2>
+<p>OpenGov’s Permitting &amp; Licensing product (PLC) helps local governments run permits, licenses and code enforcement. Search is how staff get to nearly everything in it. In a single 30-day window in 2023, 8,070 users across 445 accounts clicked into search 870,000 times. It was also the feature people complained about most.</p>
+<p>I led the redesign as the only designer, working with one PM and two engineers. We shipped in three months. The new search lives in the global navigation, and I designed it as a pattern that other OpenGov products can reuse.</p>
+<figure><a href="/media/gs-01-context-usage.webp" target="_blank" rel="noopener"><img src="/media/gs-01-context-usage.webp" alt="Search is one of our most used features, also most complained about: 8,070 users, 445 accounts, 870 thousand clicks in 30 days" width="1920" height="1080" loading="lazy" decoding="async"></a><figcaption>Search usage in the 30 days before the project began (2023).</figcaption></figure>
+
+<h2>Problem</h2>
+<p>Research surfaced five pain points. Staff described a search that was slow, especially on busy afternoons while they were on the phone with a resident. It returned too many results with the wrong ones on top. It sometimes missed records that existed, and it was inconsistent: typing an exact record number did not reliably put that record first. Input was rigid, with no filters and no tolerance for misspellings, which is an industry standard.</p>
+<blockquote>“Too many results at a time, and properties are at the bottom, which is often what we’re looking for.”<cite>Customer interview</cite></blockquote>
+<p>Separately, the old search was not accessible: you could not tab into the results once you had searched.</p>
+<div class="grid g2">
+<figure><a href="/media/gs-03-problem-slow.webp" target="_blank" rel="noopener"><img src="/media/gs-03-problem-slow.webp" alt="Problem: very slow, with a customer quote about waiting on the phone" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-04-problem-relevance.webp" target="_blank" rel="noopener"><img src="/media/gs-04-problem-relevance.webp" alt="Problem: low relevance of results, with a customer quote" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-08-problem-inaccessible.webp" target="_blank" rel="noopener"><img src="/media/gs-08-problem-inaccessible.webp" alt="Problem: inaccessible tabbing pattern" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-11-pain-points.webp" target="_blank" rel="noopener"><img src="/media/gs-11-pain-points.webp" alt="The five pain points: low result relevance, slow performance, search isn't searching, inconsistent results, inflexible and rigid input" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h2>Research</h2>
+<p>Everyone uses search on other platforms, so everyone has opinions about it. That made it more important to hear from the people who depend on it most. I filtered our user list to the accounts with the most clicks on the PLC search bar, then ran 19 interviews over three rounds, averaging 48 minutes each. Eight were internal and eleven were customers, across eight communities.</p>
+<p>I summarized every conversation, pulled direct quotes, and tagged use cases so I could see which problems came up again and again.</p>
+<figure><a href="/media/gs-02-research-numbers.webp" target="_blank" rel="noopener"><img src="/media/gs-02-research-numbers.webp" alt="Research in numbers: 19 interviews, 3 rounds, 48 minute average, 8 communities, 8 internal, 11 external users" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+
+<h2>Key insight: think location, seek record</h2>
+<p>People are usually looking for a record, but they think and organize information by location. As a teammate who used to work in a building department put it:</p>
+<blockquote>“When I was in building departments all day, every day, we didn’t really talk about record numbers. We talked about locations.”<cite>A teammate and former building-department staffer</cite></blockquote>
+<p>In every interview, people described searching for the same four kinds of things: records, locations, people and projects. Yet properties were ending up at the bottom of the results, even though locations are what people think in. That became the first of the design criteria.</p>
+<figure><a href="/media/gs-10-four-object-types.webp" target="_blank" rel="noopener"><img src="/media/gs-10-four-object-types.webp" alt="All users talked about the same objects they were searching for: record, location, person, project" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-12-design-criteria.webp" target="_blank" rel="noopener"><img src="/media/gs-12-design-criteria.webp" alt="Design criteria: think location seek record, find faster, visibility through metadata, flexibility through filters" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<ul>
+<li><strong>Think location. Seek record.</strong> Let people start from where something is and still land on the record.</li>
+<li><strong>Find faster.</strong> Results that earn their position.</li>
+<li><strong>Visibility.</strong> Show more metadata, such as the business name Licensing users kept asking for, without making rows heavy.</li>
+<li><strong>Flexibility.</strong> Filters to narrow down, but good results even when nobody applies one.</li>
+</ul>
+
+<h2>Design</h2>
+<p>Another product had already explored some search designs, which gave me a head start. I took four directions through the criteria above, and option 4 won. The workflow and heads-up area around search were outside my scope, so I focused on search itself.</p>
+<figure><a href="/media/gs-13-option-4-winner.webp" target="_blank" rel="noopener"><img src="/media/gs-13-option-4-winner.webp" alt="Option 4 was the winner" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+
+<h3>One row per object, with the right metadata</h3>
+<p>Locations, records, projects and accounts each get a row that shows the fields people use to tell results apart, and highlights which searchable field matched the input. I mapped out what each object type shows in the row and what appears on hover.</p>
+<div class="grid g1">
+<figure><a href="/media/gs-14-design-rows.webp" target="_blank" rel="noopener"><img src="/media/gs-14-design-rows.webp" alt="Result rows for location, record, project and account, with metadata and relevance of input" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-18-metadata-matrix.webp" target="_blank" rel="noopener"><img src="/media/gs-18-metadata-matrix.webp" alt="Metadata matrix: what each object type shows as primary, search-based and secondary fields" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h3>Start before you type, narrow as you go</h3>
+<p>Recently viewed items appear as soon as search opens, and filters for each object type let people drill down to exactly what they want while the unfiltered results stay good.</p>
+<div class="grid g2">
+<figure><a href="/media/gs-15-recent-and-icons.webp" target="_blank" rel="noopener"><img src="/media/gs-15-recent-and-icons.webp" alt="Quick access to recently viewed items, with icons for each object type" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-16-filters.webp" target="_blank" rel="noopener"><img src="/media/gs-16-filters.webp" alt="Filters to drill down to a specific type of object" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h3>Context without leaving the list</h3>
+<p>A preview panel shows more detail on hover, and each object type surfaces what matters for it: searchable fields and status for records, recently updated records for locations, and so on.</p>
+<div class="grid g2">
+<figure><a href="/media/gs-19-hover-context.webp" target="_blank" rel="noopener"><img src="/media/gs-19-hover-context.webp" alt="Hover previews for each object type" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-20-context-per-object.webp" target="_blank" rel="noopener"><img src="/media/gs-20-context-per-object.webp" alt="The right context for record, location and account" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+
+<h3>The details</h3>
+<p>Clear states for data that is unavailable or not found, multi-line searchable fields, and a small-screen version where tapping the info icon opens the preview panel and metadata scrolls horizontally. Keyboard navigation got its own design pass, including where the tabbing guides should live (top, on hover, in the empty state, or at the bottom), which I worked through with engineering.</p>
+<div class="grid g3">
+<figure><a href="/media/gs-17-little-things.webp" target="_blank" rel="noopener"><img src="/media/gs-17-little-things.webp" alt="States for unavailable data and multi-line searchable fields" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-21-small-devices.webp" target="_blank" rel="noopener"><img src="/media/gs-21-small-devices.webp" alt="Search on small devices with a preview panel and horizontal scroll" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-22-keyboard-nav.webp" target="_blank" rel="noopener"><img src="/media/gs-22-keyboard-nav.webp" alt="Keyboard navigation callouts" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+<figure><a href="/media/gs-23-finale.webp" target="_blank" rel="noopener"><img src="/media/gs-23-finale.webp" alt="The finished experience in context on a record page" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+
+<h2>Results</h2>
+<p>I tested the design with users on tasks like finding a dog registration permit by the pet’s name, finding an applicant by address, and opening and using search with only the keyboard. After launch I compared product analytics before and after.</p>
+<p><strong>Faster to the destination.</strong> The median time from search to a location page fell from 1 minute 7 seconds to 35 seconds. From search to a record, the median fell from 25 seconds to 15 seconds.</p>
+<div class="grid g1">
+<figure><a href="/media/gs-26-search-to-location.webp" target="_blank" rel="noopener"><img src="/media/gs-26-search-to-location.webp" alt="Search to location: legacy search 1m 7s versus new search 35s" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-27-making-faster.webp" target="_blank" rel="noopener"><img src="/media/gs-27-making-faster.webp" alt="Funnel comparison: legacy search versus new search, median time to complete 25 seconds versus 15 seconds" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+<p><strong>More use.</strong> Comparing October 2023 with October 2024, unique visitors grew from 7,558 to 9,845 and accounts from 418 to 502. Search clicks rose from 912K to 1.01M, and the share of accounts using search went from 74% to 79.1%. The share of visitors using it held steady at about 54%.</p>
+<div class="grid g1">
+<figure><a href="/media/gs-24-feature-clicks.webp" target="_blank" rel="noopener"><img src="/media/gs-24-feature-clicks.webp" alt="Feature analytics, October 2023 versus October 2024" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+<figure><a href="/media/gs-25-search-to-record.webp" target="_blank" rel="noopener"><img src="/media/gs-25-search-to-record.webp" alt="Most common path from search to a record, legacy versus new search" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+</div>
+<p class="note">Before-and-after comparisons use different date windows: the legacy funnel was measured over July 2023 and the new funnel over a recent 30 days.</p>
+
+<h2>A shareable pattern</h2>
+<p>Search is one of many places across OpenGov where people look for records, so I documented the components in detail, with states, results and panels, so other teams can adopt the pattern. The metadata system I built here was later reused in Related Records.</p>
+<figure><a href="/media/gs-28-shareable-pattern.webp" target="_blank" rel="noopener"><img src="/media/gs-28-shareable-pattern.webp" alt="The search component set designed as a shareable pattern" width="1920" height="1080" loading="lazy" decoding="async"></a></figure>
+
+<h2>What I’d do differently</h2>
+<p>I would define UX success measures before building. I had solid usage data after launch, but I could have set more detailed ways to judge success or failure up front, and agreed on them with the PM. Next time I would also instrument the key paths early so the before-and-after comparison is cleaner.</p>
+<p>What worked well: I communicated the voice of the user to the executive team and to engineering, and direct quotes from customers aligned people faster than any slide of mine could.</p>
+
+</article></main></body></html>
