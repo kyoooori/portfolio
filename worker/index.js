@@ -15,6 +15,11 @@ const PROTECTED_PREFIXES = [
   "/media/gs-",
 ];
 
+// ✏️ Exceptions that stay public (e.g. thumbnails shown on the homepage)
+const ALWAYS_PUBLIC = [
+  "/media/gs-thumb.webp",
+];
+
 const COOKIE_NAME = "portfolio_unlock";
 const COOKIE_DAYS = 30; // how long a visitor stays unlocked
 
@@ -52,6 +57,7 @@ function isProtected(pathname) {
   } catch {
     return true; // malformed URL → be safe
   }
+  if (ALWAYS_PUBLIC.some((p) => path === p.toLowerCase())) return false;
   if (PROTECTED_PREFIXES.some((pre) => path.startsWith(pre.toLowerCase()))) return true;
   return PROTECTED.some((entry) => {
     const p = entry.toLowerCase().replace(/\/+$/, "");
