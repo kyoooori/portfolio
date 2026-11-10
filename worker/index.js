@@ -8,6 +8,7 @@ const PROTECTED = [
   "/global-search",
   "/inspections",
   "/related-records",
+  "/public-portal",
 ];
 
 // ✏️ Files whose names start with these are locked too (e.g. the case-study images)
