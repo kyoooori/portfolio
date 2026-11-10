@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reshaping Inspections – Keyuri Tatu</title>
+<meta name="description" content="Keyuri Tatu, product designer. Case studies in UX strategy, research and system design.">
+<link rel="icon" href="/media/logo-hand.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&amp;family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#2B2B2B}
+a{color:inherit}
+@font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+a:focus-visible{outline:3px solid #9BA3FF;outline-offset:3px}
+article p{margin:0 0 1.1rem}
+article>p,article>h2,article>h3,article>ul,article>.lede,article>.todo{max-width:44rem}
+article h2{margin:3.5rem 0 1rem;font-size:2rem;letter-spacing:-.015em;line-height:1.15;font-family:'Fraunces',Georgia,serif;font-weight:400;font-variation-settings:'SOFT' 50,'WONK' 0}
+article h3{margin:2.5rem 0 .6rem;font-size:1.25rem;letter-spacing:-.01em}
+article>ul{padding-left:1.2rem;margin:0 0 1.5rem}article>ul li{margin-bottom:.5rem}
+figure{margin:2.5rem 0}figure img{width:100%;height:auto;display:block;background:transparent}
+figcaption{margin-top:.6rem;color:#B4B6BF;font-size:.9rem}
+.grid{display:grid;gap:1.25rem;margin:2.5rem 0}.grid figure{margin:0}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1.5rem;margin:2.5rem 0;padding:1.5rem 0;border-top:1px solid #4A4B50;border-bottom:1px solid #4A4B50}
+.meta dt{color:#B4B6BF;font-size:.9rem;margin-bottom:.3rem}.meta dd{margin:0}
+.todo{border:2px dashed #4A4B50;padding:1rem 1.25rem;color:#B4B6BF;margin:0 0 1.1rem}
+@media(max-width:600px){.g2{grid-template-columns:1fr}}
+
+.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Bricolage Grotesque',system-ui,sans-serif;color:#F2F2F2}
+.site-header .name{text-decoration:none;font-weight:600;font-size:22px;color:#F2F2F2}
+.menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
+.menu-btn[aria-expanded="true"]{background:rgba(155,163,255,.14)}
+.menu-btn img{height:52px;width:auto;display:block}
+.site-menu{position:absolute;top:96px;right:clamp(1.25rem,5vw,4rem);width:260px;display:flex;flex-direction:column;gap:4px;padding:8px;background:#353535;border:1px solid #4A4B50;border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.25)}
+.site-menu[hidden]{display:none}
+.site-menu a{display:block;padding:12px 16px;border-radius:10px;text-decoration:none;font-size:1.25rem;font-weight:600;letter-spacing:-.01em;color:#F2F2F2}
+.site-menu a:hover{background:rgba(255,255,255,.06)}
+.site-menu a[aria-current="page"]{color:#9BA3FF;background:rgba(155,163,255,.14)}
+body{overflow-wrap:break-word}
+@media(max-width:600px){.lede{font-size:1.45rem!important}}
+.video{position:relative;aspect-ratio:16/9;background:#1F1F1F}.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.6">
+<header class="site-header"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><img src="/media/logo-hand.png" alt=""></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/storyline">Storyline</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
+<main style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem">
+<article style="max-width: 68rem; margin-top: 3rem">
+
+<span style="color: #9BA3FF; font-weight: 600">[Year]</span>
+<h1 style="font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-family: 'Fraunces', Georgia, serif; font-weight: 350; font-variation-settings: 'SOFT' 50, 'WONK' 0; max-width: 22ch; margin: 0.5rem 0 1rem">Reshaping Inspections in Local Government</h1>
+<p class="lede" style="color: #B4B6BF; font-family: 'My Hand', cursive; font-size: 1.8rem; line-height: 1.3">[One or two sentences on what the project changed for inspection teams and the public.]</p>
+
+<figure><img src="/media/insp-hero.webp" alt="The Capacity Planning screen on a retro desktop monitor"><figcaption>Capacity Planning: how full each district and inspector is, at a glance.</figcaption></figure>
+
+<dl class="meta">
+<div><dt>Role</dt><dd>[Your role]</dd></div>
+<div><dt>Team</dt><dd>[Team]</dd></div>
+<div><dt>Timeline</dt><dd>[Timeline]</dd></div>
+<div><dt>Users</dt><dd>Inspectors<br>Inspection supervisors<br>Permit applicants</dd></div>
+<div><dt>Company</dt><dd>OpenGov, Permitting &amp; Licensing (PLC)</dd></div>
+</dl>
+
+<h2>Overview</h2>
+<p class="todo">[What inspections are in PLC, why they mattered, and what the project set out to do.]</p>
+
+<h2>Problem</h2>
+<p class="todo">[What was broken for staff and applicants: how requests came in, how scheduling and capacity were handled, and what that cost. Add a customer quote if you have one.]</p>
+
+<h2>Research</h2>
+<p class="todo">[Who you talked to, how many interviews, and the key insights that shaped the design.]</p>
+
+<h2>Setting up inspectors</h2>
+<p>Admins define who inspects what, and when. Each inspector has the inspection types they’re qualified for, the days they work, and their hours per day and week. That becomes the capacity the rest of the system schedules against.</p>
+<figure><img src="/media/insp-4.webp" alt="Inspection Settings: a table of inspectors with their inspection types, working days and hours per day and week"><figcaption>Inspection Settings: inspection types, working days and hours for each inspector.</figcaption></figure>
+
+<h2>Booking an inspection</h2>
+<p>Applicants book inspections themselves in a step-by-step flow: organize inspections, pick a date and time, add a contact and notes, then review. They choose a day, then a morning or afternoon slot, and the calendar shows which slots are open and which will need staff confirmation. Requests outside regular hours capture a label, a desired time and a reason, so staff can approve them.</p>
+<div class="grid g2">
+<figure><img src="/media/insp-7.webp" alt="Book An Inspection: choosing a date, with AM marked as needing confirmation and PM marked available"><figcaption>AM and PM slots show their availability up front.</figcaption></figure>
+<figure><img src="/media/insp-6.webp" alt="Book An Inspection: an off-hour inspection request with a label, desired time and reason"><figcaption>Off-hour requests collect what staff need to confirm them.</figcaption></figure>
+</div>
+
+<h2>Handling requests</h2>
+<p>Staff see new requests in one queue, with the record, when the request came in, and the applicant’s preferred time. Off-hour requests are flagged, and staff can see who else is viewing a request so two people don’t book the same one. Inspections booked automatically into a full day are called out, so a supervisor can step in.</p>
+<figure><img src="/media/insp-9.webp" alt="Inspection Requests: a queue of new requests beside the details of one request, with a banner noting it was booked via Auto Mode on a day at capacity"><figcaption>The request queue, with a booking made automatically on a day that was already full.</figcaption></figure>
+
+<h2>Planning capacity</h2>
+<p>Supervisors plan by district. The week view shows morning and afternoon slots for every zone, flags the days that need more slots, and counts the floaters available to help. Capacity Planning goes a level deeper: which districts are full, which inspectors are booked, and which floaters can be added to a district with one click.</p>
+<figure><img src="/media/insp-1.webp" alt="Capacity week view: AM and PM slots for each zone across a week, with problem days and zones needing slots flagged"><figcaption>The week at a glance: slots per zone, problem days and available floaters.</figcaption></figure>
+<figure><img src="/media/insp-2.webp" alt="Capacity Planning: districts with slots filled, the inspectors in a district at capacity, and floaters that can be added"><figcaption>Drilling into a district at capacity to bring in a floater.</figcaption></figure>
+
+<h2>Scheduling</h2>
+<p>Booked inspections land on a shared calendar that can be filtered by inspector or group. Appointments that were booked automatically are marked, and the calendar syncs with Outlook, so inspectors see inspections and meetings in one place.</p>
+<figure><img src="/media/insp-5.webp" alt="Scheduled Appointments: a week calendar of inspections and meetings with Outlook sync on"><figcaption>Scheduled Appointments, with auto-scheduled and Outlook items marked.</figcaption></figure>
+
+<h2>Doing the inspection</h2>
+<p>Inspections are steps in the record’s workflow, with a summary of how many have passed, partially passed, failed or are locked, plus completed and scheduled visits. In the field, the inspector sees which visit this is, gets context written by OG Assist, and records an overall result of pass, fail or partial pass, with comments, photos and checklist items. They can also cancel upcoming visits or ask for more.</p>
+<figure><img src="/media/insp-3.webp" alt="A building permit's workflow with inspection steps, and a summary of inspection results and visits for a related record"><figcaption>Inspections in the record workflow, with results and visits summarized.</figcaption></figure>
+<figure><img src="/media/insp-8.webp" alt="Overall Inspection Result: the third of five visits, AI-written context, and pass, fail or partial pass with comments, photos and checklist items"><figcaption>Recording a result on the third of five visits.</figcaption></figure>
+
+<h2>Results</h2>
+<p class="todo">[Impact: adoption, time saved, fewer phone calls, customer feedback. Early or qualitative results are fine.]</p>
+
+<h2>Reflection</h2>
+<p class="todo">[What went well, and what you’d do differently.]</p>
+
+<nav aria-label="More case studies" style="display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #4A4B50">
+<a href="/primer-conference" style="text-decoration: none; flex: 1 1 16rem"><span style="display: block; color: #B4B6BF; font-size: 0.9rem">← Previous</span><span style="font-size: 1.4rem; font-weight: 700">Primer Conference 2020</span></a>
+<a href="/global-search" style="text-decoration: none; flex: 1 1 16rem; text-align: right"><span style="display: block; color: #B4B6BF; font-size: 0.9rem">Next →</span><span style="font-size: 1.4rem; font-weight: 700">Global Search</span></a>
+</nav>
+
+</article>
+</main>
+</div>
+<script>
+(function(){var b=document.querySelector('.menu-btn'),m=document.getElementById('site-menu');
+function set(o){m.hidden=!o;b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')}
+b.addEventListener('click',function(e){e.stopPropagation();set(m.hidden)});
+document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target))set(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){set(false);b.focus()}});})();
+</script>
+</body>
+</html>

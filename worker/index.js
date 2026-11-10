@@ -13,6 +13,8 @@ const PROTECTED = [
 // ✏️ Files whose names start with these are locked too (e.g. the case-study images)
 const PROTECTED_PREFIXES = [
   "/media/gs-",
+  "/media/insp-",
+  "/media/rr-",
 ];
 
 // ✏️ Exceptions that stay public (e.g. thumbnails shown on the homepage)
