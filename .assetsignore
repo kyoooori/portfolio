@@ -1,0 +1,8 @@
+# Files that should never be served publicly on the website
+.git
+.DS_Store
+.assetsignore
+wrangler.jsonc
+worker
+README.md
+chatbot-draft-ignore
