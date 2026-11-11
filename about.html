@@ -15,13 +15,15 @@ a{color:inherit}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 a:focus-visible,button:focus-visible{outline:3px solid #9BA3FF;outline-offset:3px}
 article p{margin:0 0 1.1rem}
+.hand,.hand *:not(h1):not(h2){font-family:'My Hand',cursive!important;font-weight:400!important;font-variation-settings:normal!important;letter-spacing:0!important}
 .ph{border:2px dashed #4A4B50;display:flex;align-items:center;justify-content:center;color:#B4B6BF;text-align:center;padding:1rem}
 @media(max-width:760px){.about-grid,.facts{grid-template-columns:1fr!important}}
 @media(max-width:1000px){.things{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:560px){.things{grid-template-columns:1fr!important}}
 
 .site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Bricolage Grotesque',system-ui,sans-serif;color:#F2F2F2}
-.site-header .name{text-decoration:none;font-weight:600;font-size:22px;color:#F2F2F2}
+@font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+.site-header .name{text-decoration:none;font-family:'My Hand',cursive;font-weight:400;font-size:34px;line-height:1;color:#F2F2F2}
 .menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
 .menu-btn[aria-expanded="true"]{background:rgba(155,163,255,.14)}
 .menu-btn img{height:52px;width:auto;display:block}
@@ -39,7 +41,7 @@ main{overflow-x:clip}
 <body>
 <div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.6">
 <header class="site-header"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><img src="/media/logo-hand.png" alt=""></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/">Case Studies</a><a href="/about" aria-current="page">About Me</a><a href="/storyline">Storyline</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
-<main style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem">
+<main class="hand" style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem; font-size: 1.35rem; line-height: 1.45">
 <article style="max-width: 68rem; margin-top: 3rem">
 
 <div class="about-grid" style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start">
@@ -47,9 +49,9 @@ main{overflow-x:clip}
 <h1 style="font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-family: 'Fraunces', Georgia, serif; font-weight: 350; font-variation-settings: 'SOFT' 50, 'WONK' 0; margin: 0 0 2rem; font-style: normal">Hello!</h1>
 <p style="font-size: 1.6rem; line-height: 1.35; letter-spacing: -0.01em; margin: 0 0 1.5rem">I’m Keyuri Tatu. Say it <span style="color: #9BA3FF">Kay-yoo-ree</span>, or call me Key, which is what Starbucks does.</p>
 
-<h2 style="margin: 2.5rem 0 0.75rem; font-size: 1.25rem; letter-spacing: -0.01em">How I work</h2>
+<h2 style="margin: 2.5rem 0 0.75rem; font-size: 1.5rem; letter-spacing: -0.01em; line-height: 1.2; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-variation-settings: 'SOFT' 50, 'WONK' 0">How I work</h2>
 <p>I don’t design for one fixed medium, follow a textbook process, or work in a straight line. I look at the data I have and build the process the problem actually needs.</p>
-<h2 style="margin: 2.5rem 0 0.75rem; font-size: 1.25rem; letter-spacing: -0.01em">Why I do it</h2>
+<h2 style="margin: 2.5rem 0 0.75rem; font-size: 1.5rem; letter-spacing: -0.01em; line-height: 1.2; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-variation-settings: 'SOFT' 50, 'WONK' 0">Why I do it</h2>
 <p>Describing myself is the hardest brief I get. What I do know is that I want my skills to make a positive difference in society. I got that from my dad.</p>
 </div>
 <img src="/media/headshot.webp" alt="Keyuri smiling at her cat by a sunny window, holding a carton of Frooti mango drink" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; border-radius: 12px">

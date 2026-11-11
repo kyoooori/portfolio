@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&amp;family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#2B2B2B}
+.paper{background-color:#2B2B2B;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23g%29'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.03 .07' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .025 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23f%29'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1024' height='1024'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.004' numOctaves='3' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .35 -.08'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23m%29'/%3E%3C/svg%3E")}
 a{color:inherit}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 a:focus-visible{outline:3px solid #9BA3FF;outline-offset:-3px}
@@ -24,7 +25,8 @@ a:focus-visible{outline:3px solid #9BA3FF;outline-offset:-3px}
 @media(prefers-reduced-motion:reduce){.card .shot img,.card .shot video{transition:none}}
 
 .site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Bricolage Grotesque',system-ui,sans-serif;color:#F2F2F2}
-.site-header .name{text-decoration:none;font-weight:600;font-size:22px;color:#F2F2F2}
+@font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+.site-header .name{text-decoration:none;font-family:'My Hand',cursive;font-weight:400;font-size:34px;line-height:1;color:#F2F2F2}
 .menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
 .menu-btn[aria-expanded="true"]{background:rgba(155,163,255,.14)}
 .menu-btn img{height:52px;width:auto;display:block}
@@ -40,13 +42,13 @@ main{overflow-x:clip}
 </style>
 </head>
 <body>
-<div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.6; font-weight: 400">
+<div class="paper" style="min-height: 100vh; color: #F2F2F2; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.6; font-weight: 400">
 <div style="border-bottom: 1px solid #55527E"><header class="site-header"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><img src="/media/logo-hand.png" alt=""></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/storyline">Storyline</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header></div>
 <main style="padding: 0 0 6rem">
 <div style="padding: 0 clamp(1.25rem, 5vw, 4rem)">
 <h1 class="sr-only">Keyuri Tatu, product designer</h1>
 <p style="max-width: 48ch; margin: 3.5rem 0 0; color: #F2F2F2; font-family: 'My Hand', cursive; font-size: 24px; line-height: 1.35; width: 100%">I design end-to-end experiences rooted in human connection, most recently civic tools used by local and state governments and the residents they serve. I believe a process is a template, not a rule, and I lead with questions. Ideas are at the center of my practice: nothing beats finding a strong concept at the core of a complex experience. I’ve recently taken on a much broader product role and loving the stretch.</p>
-<h2 id="work" style="margin: clamp(6rem, 12vw, 10rem) 0 2rem; font-family: 'Fraunces', Georgia, serif; font-weight: 350; font-variation-settings: 'SOFT' 50, 'WONK' 0; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.025em"><em style="font-style: italic; font-variation-settings: 'SOFT' 100, 'WONK' 1">Case studies</em></h2>
+<h2 id="work" style="margin: clamp(6rem, 12vw, 10rem) 0 2rem; font-family: 'Fraunces', Georgia, serif; font-weight: 350; font-variation-settings: 'SOFT' 50, 'WONK' 0; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.025em"><br></h2>
 </div>
 
 <div class="cards" style="border-top: 1px solid #55527E; border-left: 1px solid #55527E">
@@ -58,7 +60,7 @@ main{overflow-x:clip}
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Owning a Unified Public Portal and SiteBuilder for Local Government</h3>
+<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em">Owning a Unified Public Portal and SiteBuilder for Local Government</h3>
 <p style="margin: 0; font-family: 'My Hand', cursive; font-size: 1.4rem; line-height: 1.35; color: #D6D7DE; max-width: 44ch">[Short description of the project: the problem, your role and the outcome.]</p>
 <p style="margin: auto 0 0; padding-top: 0.4rem; display: flex; gap: 1.25rem; font-size: 0.85rem; color: #B4B6BF"><span>[Year]</span><span>OpenGov</span></p>
 </div>
@@ -71,7 +73,7 @@ main{overflow-x:clip}
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Reshaping Inspections in Local Government</h3>
+<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em">Reshaping Inspections in Local Government</h3>
 <p style="margin: 0; font-family: 'My Hand', cursive; font-size: 1.4rem; line-height: 1.35; color: #D6D7DE; max-width: 44ch">[Short description of the project: the problem, your role and the outcome.]</p>
 <p style="margin: auto 0 0; padding-top: 0.4rem; display: flex; gap: 1.25rem; font-size: 0.85rem; color: #B4B6BF"><span>2024–2026</span><span>OpenGov</span></p>
 </div>
@@ -86,7 +88,7 @@ main{overflow-x:clip}
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Building A Reusable Global Search Pattern</h3>
+<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em">Building A Reusable Global Search Pattern</h3>
 <p style="margin: 0; font-family: 'My Hand', cursive; font-size: 1.4rem; line-height: 1.35; color: #D6D7DE; max-width: 44ch">Redesigning the most-used, most-complained-about feature in OpenGov’s permitting software. Faster paths to records and locations, shipped in three months.</p>
 <p style="margin: auto 0 0; padding-top: 0.4rem; display: flex; gap: 1.25rem; font-size: 0.85rem; color: #B4B6BF"><span>2023–24</span><span>OpenGov</span></p>
 </div>
@@ -99,7 +101,7 @@ main{overflow-x:clip}
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Designing A Connection Between Government Records To Reflect Real-World Relationships</h3>
+<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em">Designing A Connection Between Government Records To Reflect Real-World Relationships</h3>
 <p style="margin: 0; font-family: 'My Hand', cursive; font-size: 1.4rem; line-height: 1.35; color: #D6D7DE; max-width: 44ch">Connecting records that used to live in silos in OpenGov’s permitting software, so parent and child permits share information and wait on each other’s workflows.</p>
 <p style="margin: auto 0 0; padding-top: 0.4rem; display: flex; gap: 1.25rem; font-size: 0.85rem; color: #B4B6BF"><span>2025</span><span>OpenGov</span></p>
 </div>
@@ -114,7 +116,7 @@ main{overflow-x:clip}
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Building And Facilitating The Design Thinking Program For Internal Stakeholders</h3>
+<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em">Building And Facilitating The Design Thinking Program For Internal Stakeholders</h3>
 <p style="margin: 0; font-family: 'My Hand', cursive; font-size: 1.4rem; line-height: 1.35; color: #D6D7DE; max-width: 44ch">Designing a workshop and a design thinking book in the context of the transportation industry to promote a user-centric approach to creating products at GE Transportation.</p>
 <p style="margin: auto 0 0; padding-top: 0.4rem; display: flex; gap: 1.25rem; font-size: 0.85rem; color: #B4B6BF"><span>2018–19</span><span>GE Transportation</span></p>
 </div>
@@ -127,7 +129,7 @@ main{overflow-x:clip}
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Crafting Visual Identity And Material For Primer Conference 2020</h3>
+<h3 style="margin: 0 0 1rem; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: normal; font-variation-settings: 'SOFT' 100, 'WONK' 1; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em">Crafting Visual Identity And Material For Primer Conference 2020</h3>
 <p style="margin: 0; font-family: 'My Hand', cursive; font-size: 1.4rem; line-height: 1.35; color: #D6D7DE; max-width: 44ch">Creating a visual language and illustrations for Speculative Futures’ annual conference to capture the theme of ‘Activating Futures’.</p>
 <p style="margin: auto 0 0; padding-top: 0.4rem; display: flex; gap: 1.25rem; font-size: 0.85rem; color: #B4B6BF"><span>2019–20</span><span>Speculative Futures</span></p>
 </div>
