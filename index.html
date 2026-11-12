@@ -28,7 +28,10 @@ a:focus-visible{outline:3px solid #3340F0;outline-offset:-3px}
 .site-header .name{text-decoration:none;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-style:italic;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#F2F2F2}
 .menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
 .menu-btn[aria-expanded="true"]{background:rgba(155,163,255,.14)}
-.menu-btn img{height:52px;width:auto;display:block}
+.menu-btn .trig{position:relative;display:block;width:87px;height:60px}
+.menu-btn .trig i{position:absolute;left:8px;width:33px;height:3.8px;border-radius:2px;background:#F2F2F2}
+.site-header.light .menu-btn .trig i{background:#37383F}
+.menu-btn .trig img{position:absolute;left:13.6px;top:2px;width:83px;height:52px;display:block}
 .site-menu{position:absolute;top:96px;right:clamp(1.25rem,5vw,4rem);width:260px;display:flex;flex-direction:column;gap:4px;padding:8px;background:#353535;border:1px solid #4A4B50;border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.25)}
 .site-menu[hidden]{display:none}
 .site-menu a{display:block;padding:12px 16px;border-radius:10px;text-decoration:none;font-size:1.25rem;font-weight:600;letter-spacing:-.01em;color:#F2F2F2}
@@ -49,11 +52,11 @@ main{overflow-x:clip}
 </head>
 <body>
 <div style="min-height: 100vh; background: #FFFCF5; color: #15171F; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
-<div style="position: relative; z-index: 20; background-color: #FFFFFF"><header class="site-header light"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><img src="/media/logo-hand.png" alt=""></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/storyline">Storyline</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header></div>
+<div style="position: relative; z-index: 20; background-color: #FFFFFF"><header class="site-header light"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:13px"></i><i style="top:21px"></i><i style="top:29px"></i><img src="/media/menu-hand.png" alt=""></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/storyline">Storyline</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header></div>
 <main style="padding: 0 0 6rem">
-<div style="padding: 0 clamp(1.25rem, 5vw, 4rem)">
+<div style="padding: 0 clamp(1.25rem, 5vw, 4rem); margin-top: 100px; margin-bottom: 0px; min-height: 543px">
 <h1 class="sr-only">Keyuri Tatu, product designer</h1>
-<p style="max-width: 48ch; margin: 3.5rem 0 0; color: #002FE5; font-family: 'My Hand', cursive; font-size: 40px; line-height: 1.4; width: 100%; font-weight: 400; letter-spacing: 0.5px">I design end-to-end experiences rooted in human connection, most recently civic tools used by local and state governments and the residents they serve. I believe a process is a template, not a rule, and I lead with questions. Ideas are at the center of my practice: nothing beats finding a strong concept at the core of a complex experience. I’ve recently taken on a much broader product role and loving the stretch.</p>
+<p style="max-width: 48ch; margin: 3.5rem 0 0; color: #002FE5; font-family: 'My Hand', cursive; font-size: 35px; line-height: 1.4; width: 100%; font-weight: 400; letter-spacing: 0.5px; min-height: 384px">Hi!<br>I design end-to-end experiences rooted in human connection, most recently civic tools used by local and state governments and the residents they serve. I believe a process is a template, not a rule, and I lead with questions. Ideas are at the center of my practice: nothing beats finding a strong concept at the core of a complex experience. I’ve recently taken on a much broader product role and loving the stretch.</p>
 <h2 id="work" style="margin: clamp(6rem, 12vw, 10rem) 0 2rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.025em; font-style: italic"><br></h2>
 </div>
 
