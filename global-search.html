@@ -44,6 +44,13 @@ blockquote cite{display:block;margin-top:.6rem;font-size:.9rem;font-style:normal
 .site-menu a{display:block;padding:12px 16px;border-radius:10px;text-decoration:none;font-size:1.25rem;font-weight:600;letter-spacing:-.01em;color:#F2F2F2}
 .site-menu a:hover{background:rgba(255,255,255,.06)}
 .site-menu a[aria-current="page"]{color:#9BA3FF;background:rgba(155,163,255,.14)}
+.site-header.light{color:#15171F;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.site-header.light .name{color:#15171F}
+.site-header.light .menu-btn[aria-expanded="true"]{background:rgba(51,64,240,.08)}
+.site-header.light .site-menu{background:#FFFCF5;border-color:#D8DAE4}
+.site-header.light .site-menu a{color:#15171F}
+.site-header.light .site-menu a:hover{background:rgba(0,0,0,.04)}
+.site-header.light .site-menu a[aria-current="page"]{color:#3340F0;background:rgba(51,64,240,.08)}
 body{overflow-wrap:break-word}
 main{overflow-x:clip}
 @media(max-width:600px){.lede{font-size:1.45rem!important}}
@@ -52,13 +59,18 @@ main{overflow-x:clip}
 </head>
 <body>
 <div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
-<header class="site-header"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><img src="/media/logo-hand.png" alt=""></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/storyline">Storyline</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
-<main style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem">
-<article style="max-width: 68rem; margin-top: 3rem">
-
-<span style="color: #9BA3FF; font-weight: 600">2023–24</span>
-<h1 style="font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; max-width: 22ch; margin: 0.5rem 0 1rem; font-style: italic">Building A Reusable Global Search Pattern</h1>
-<p class="lede" style="color: #B4B6BF; font-family: 'My Hand', cursive; font-size: 1.8rem; line-height: 1.3">Redesigning the most-used and most-complained-about feature in OpenGov’s permitting software, so staff reach the right record or location faster.</p>
+<div class="hero" style="color: #15171F; background-color: #FFFCF5">
+<header class="site-header light"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><img src="/media/logo-hand.png" alt=""></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/storyline">Storyline</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
+<div style="padding: 3rem clamp(1.25rem, 5vw, 4rem) 3.5rem">
+<div style="max-width: 68rem">
+<span style="color: #3340F0; font-weight: 600">2023–24</span>
+<h1 style="font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; max-width: 22ch; margin: 0.5rem 0 2rem; font-style: italic">Building A Reusable Global Search Pattern</h1>
+<p class="lede" style="margin: 0; max-width: 44rem; color: #002FE5; font-family: 'My Hand', cursive; font-size: 1.8rem; line-height: 1.3">Redesigning the most-used and most-complained-about feature in OpenGov’s permitting software, so staff reach the right record or location faster.</p>
+</div>
+</div>
+</div>
+<main style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem; margin-top: 120px">
+<article style="max-width: 68rem; margin-top: 0.5rem">
 
 <figure><img src="/media/gs-16-filters.webp" alt="The new search: filters for records, locations, people and projects, with a preview panel beside the results"><figcaption>The new search, with filters by object type and a preview panel.</figcaption></figure>
 

@@ -15,11 +15,14 @@ a{color:inherit}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 a:focus-visible,button:focus-visible{outline:3px solid #9BA3FF;outline-offset:3px}
 article p{margin:0 0 1.1rem}
-.hand,.hand *:not(h1):not(h2){font-family:'My Hand',cursive!important;font-weight:400!important;font-variation-settings:normal!important;letter-spacing:0!important}
 .ph{border:2px dashed #4A4B50;display:flex;align-items:center;justify-content:center;color:#B4B6BF;text-align:center;padding:1rem}
 @media(max-width:760px){.about-grid,.facts{grid-template-columns:1fr!important}}
-@media(max-width:1000px){.things{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-@media(max-width:560px){.things{grid-template-columns:1fr!important}}
+.things{display:grid;gap:0}
+.thing{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(1.25rem,3vw,2.5rem);padding:2rem 0;border-top:1px solid #4A4B50}
+.thing:last-child{border-bottom:1px solid #4A4B50}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;align-content:start}
+.photos img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:8px}
+@media(max-width:760px){.thing{grid-template-columns:1fr}.photos{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 .site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Inter',system-ui,sans-serif;font-size:18px;font-weight:300;color:#F2F2F2}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
@@ -32,6 +35,13 @@ article p{margin:0 0 1.1rem}
 .site-menu a{display:block;padding:12px 16px;border-radius:10px;text-decoration:none;font-size:1.25rem;font-weight:600;letter-spacing:-.01em;color:#F2F2F2}
 .site-menu a:hover{background:rgba(255,255,255,.06)}
 .site-menu a[aria-current="page"]{color:#9BA3FF;background:rgba(155,163,255,.14)}
+.site-header.light{color:#15171F;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.site-header.light .name{color:#15171F}
+.site-header.light .menu-btn[aria-expanded="true"]{background:rgba(51,64,240,.08)}
+.site-header.light .site-menu{background:#FFFCF5;border-color:#D8DAE4}
+.site-header.light .site-menu a{color:#15171F}
+.site-header.light .site-menu a:hover{background:rgba(0,0,0,.04)}
+.site-header.light .site-menu a[aria-current="page"]{color:#3340F0;background:rgba(51,64,240,.08)}
 body{overflow-wrap:break-word}
 main{overflow-x:clip}
 @media(max-width:600px){.lede{font-size:1.45rem!important}}
@@ -41,13 +51,13 @@ main{overflow-x:clip}
 <body>
 <div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
 <header class="site-header"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><img src="/media/logo-hand.png" alt=""></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/">Case Studies</a><a href="/about" aria-current="page">About Me</a><a href="/storyline">Storyline</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
-<main class="hand" style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem; font-size: 1.35rem; line-height: 1.45">
+<main style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem">
 <article style="max-width: 68rem; margin-top: 3rem">
 
 <div class="about-grid" style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start">
 <div>
 <h1 style="font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; margin: 0 0 2rem; font-style: italic">Hello!</h1>
-<p style="font-size: 1.6rem; line-height: 1.35; letter-spacing: -0.01em; margin: 0 0 1.5rem">I’m Keyuri Tatu. Say it <span style="color: #9BA3FF">Kay-yoo-ree</span>, or call me Key, which is what Starbucks does.</p>
+<p style="font-size: 1.6rem; line-height: 1.35; letter-spacing: -0.01em; margin: 0 0 1.5rem">I’m Keyuri Tatu. Say it <span style="color: rgb(155, 163, 255)">Kay-yoo-ree.</span></p>
 
 <h2 style="margin: 2.5rem 0 0.75rem; font-size: 1.5rem; letter-spacing: -0.01em; line-height: 1.2; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-style: italic">How I work</h2>
 <p>I don’t design for one fixed medium, follow a textbook process, or work in a straight line. I look at the data I have and build the process the problem actually needs.</p>
@@ -57,34 +67,56 @@ main{overflow-x:clip}
 <img src="/media/headshot.webp" alt="Keyuri smiling at her cat by a sunny window, holding a carton of Frooti mango drink" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; border-radius: 12px">
 </div>
 
-<h2 style="margin: 4.5rem 0 1.25rem; font-size: 2rem; letter-spacing: -0.015em; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-style: italic">A few things about me</h2>
+
 <div class="facts" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem">
-<div style="border-top: 1px solid #4A4B50; padding-top: 1rem"><b style="display: block; font-size: 1.1rem; margin-bottom: 0.25rem">Left-handed, mostly</b><span style="color: #B4B6BF">In badminton I serve with my left and hit with my right.</span></div>
-<div style="border-top: 1px solid #4A4B50; padding-top: 1rem"><b style="display: block; font-size: 1.1rem; margin-bottom: 0.25rem">Two roommates</b><span style="color: #B4B6BF">My cats, Mau and Cora.</span></div>
-<div style="border-top: 1px solid #4A4B50; padding-top: 1rem"><b style="display: block; font-size: 1.1rem; margin-bottom: 0.25rem">Almost a vocalist</b><span style="color: #B4B6BF">I take Indian classical music lessons. My parents hoped I’d become a singer.</span></div>
+
+
+
 </div>
 
-<h2 style="margin: 4.5rem 0 1.25rem; font-size: 2rem; letter-spacing: -0.015em; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-style: italic">When I’m not designing</h2>
-<div class="things" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem">
+<h2 style="margin: 4.5rem 0 1.25rem; font-size: 2rem; letter-spacing: -0.015em; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-style: italic">A little more about me</h2>
+<div class="things">
+<div class="thing">
 <div>
-<div class="ph" style="aspect-ratio: 1 / 1">[Illustration]</div>
-<b style="display: block; font-size: 1.1rem; margin: 0.9rem 0 0.25rem">Illustrating</b>
-<span style="color: #B4B6BF">People, what they wear, and what they’re thinking.</span>
+<b style="display: block; font-size: 1.25rem; margin: 0 0 0.4rem">I like making things!</b>
+<span style="color: #B4B6BF">Cakes, furniture, painting, anything really - it depends on the idea. I change my space up every few months. I have aced the FB marketplace + Uber courier game to collect unique items :)</span>
 </div>
-<div>
-<div class="ph" style="aspect-ratio: 1 / 1">[Food photo]</div>
-<b style="display: block; font-size: 1.1rem; margin: 0.9rem 0 0.25rem">Cooking</b>
-<span style="color: #B4B6BF">And feeding people. Follow along at <a href="https://www.instagram.com/halla.bowl/" style="color: #9BA3FF">@halla.bowl</a>.</span>
+<div class="photos">
+<img src="/media/about-making-cake.webp" alt="A homemade chocolate cake piped with a white kolam pattern">
+<img src="/media/about-making-table.webp" alt="A wooden coffee table shaped like an open hand">
+<img src="/media/about-making-plush.webp" alt="A handmade felt plush of a vada pav with a green chili">
 </div>
-<div>
-<div class="ph" style="aspect-ratio: 1 / 1">[Home photo]</div>
-<b style="display: block; font-size: 1.1rem; margin: 0.9rem 0 0.25rem">Decorating</b>
-<span style="color: #B4B6BF">Making my home feel like mine.</span>
 </div>
+<div class="thing">
 <div>
-<div class="ph" style="aspect-ratio: 1 / 1">[Documenting photo]</div>
-<b style="display: block; font-size: 1.1rem; margin: 0.9rem 0 0.25rem">Documenting</b>
-<span style="color: #B4B6BF">Capturing things while staying true to the original.</span>
+<b style="display: block; font-size: 1.25rem; margin: 0 0 0.4rem">I have two cats :)</b>
+<span style="color: #B4B6BF">Mau - she's sassy and thinks she owns the house - and Coco - she's a flower child.</span>
+</div>
+<div class="photos">
+<img src="/media/about-cats-1.webp" alt="Two tabby cats curled up together into one round ball on a pink quilt">
+<img src="/media/about-cats-2.webp" alt="A gray cat on the bed looking straight up at the camera, with the other cat behind her">
+<img src="/media/about-cats-3.webp" alt="A gray cat sitting in a black leather armchair by a window" style="object-position: center 70%">
+</div>
+</div>
+<div class="thing">
+<div>
+<b style="display: block; font-size: 1.25rem; margin: 0 0 0.4rem">She's a singer!</b>
+<span style="color: #B4B6BF">I have been singing pretty much since I was a little girl. I'm part of a small sourh asian band in the Bay Area.&nbsp;</span>
+</div>
+<div class="photos">
+<img src="/media/about-singing-stage.webp" alt="Keyuri singing on stage under purple and green lights, beside a guitarist">
+<img src="/media/about-singing-band.webp" alt="Keyuri with her band on stage after a show">
+</div>
+</div>
+<div class="thing">
+<div>
+<b style="display: block; font-size: 1.25rem; margin: 0 0 0.4rem">I volunteer.</b>
+<span style="color: #B4B6BF">I enjoy spending time in the community to create a positive impact in whatver small way I can.</span>
+</div>
+<div class="photos">
+<img src="/media/about-volunteer-group.webp" alt="A group of older women in matching pink outfits, smiling backstage">
+<img src="/media/about-volunteer-audience.webp" alt="The same performers seated before an audience in a community hall">
+</div>
 </div>
 </div>
 
