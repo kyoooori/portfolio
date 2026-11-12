@@ -14,17 +14,21 @@ body{margin:0;background:#2B2B2B}
 a{color:inherit}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 a:focus-visible,button:focus-visible{outline:3px solid #9BA3FF;outline-offset:3px}
-.tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid #55527E;border-left:1px solid #55527E}
-.s2{grid-column:span 2}.s3{grid-column:span 3}.s4{grid-column:span 4}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #55527E;border-left:1px solid #55527E}
 .tile{display:flex;flex-direction:column;border-right:1px solid #55527E;border-bottom:1px solid #55527E}
-.tile .pic{padding:40px;border-bottom:1px solid #55527E;flex:1;display:flex;align-items:center;justify-content:center}
-.tile .pic img{width:100%;height:auto;display:block;border-radius:12px}
-.tile .txt{padding:28px 40px 36px;display:flex;flex-direction:column;gap:.4rem}
-.tile h3{margin:0;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:26px;line-height:1.15;letter-spacing:-.015em;font-style:italic}
-.s3 h3,.s4 h3{font-size:32px}
-.tile p{margin:0;font-family:'My Hand',cursive;font-size:1.3rem;line-height:1.35;color:#002FE5}
-@media(max-width:1000px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.s2,.s3{grid-column:span 1}.s4{grid-column:span 2}}
-@media(max-width:600px){.tiles{grid-template-columns:minmax(0,1fr)}.tile{grid-column:auto!important}.tile .pic{padding:24px}.tile .txt{padding:24px}}
+.tile .pic{padding:40px;border-bottom:1px solid #55527E}
+.tile .pic img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:12px}
+.tile .txt{flex:1;padding:28px 40px 36px;display:flex;flex-direction:column;gap:.4rem}
+.tile p{margin:0;font-family:'Inter',system-ui,sans-serif;font-weight:300;font-size:18px;line-height:1.5;color:#FFFFFF}
+.tile.feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.tile.feature .pic{border-bottom:1px solid #55527E}
+.tile.feature .pic:first-child{border-right:1px solid #55527E}
+.tile.feature .pic img,.tile.feature .pic video{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border-radius:12px;background:#1F1F1F}
+.tile.feature .txt{grid-column:1/-1;padding:40px clamp(2rem,5vw,5rem) 48px;gap:1rem}
+.tile.feature p{font-size:20px;max-width:60ch}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:#FFFFFF;font-weight:500}
+@media(max-width:1000px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.tiles{grid-template-columns:minmax(0,1fr)}.tile.feature{grid-template-columns:minmax(0,1fr)}.tile.feature .pic:first-child{border-right:0}.tile .pic{padding:24px}.tile .txt{padding:24px}}
 
 .site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Inter',system-ui,sans-serif;font-size:18px;font-weight:300;color:#F2F2F2}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
@@ -54,202 +58,137 @@ main{overflow-x:clip}
 </style>
 </head>
 <body>
-<div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
+<div style="min-height: 100vh; background: #2B2B2B; color: #FFFFFF; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
 <header class="site-header"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:13px"></i><i style="top:21px"></i><i style="top:29px"></i><img src="/media/menu-hand.png" alt=""></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/">Case Studies</a><a href="/about">About Me</a><a href="/storyline">Storyline</a><a href="/resume">Resume</a><a href="/other-things" aria-current="page">Other Things</a></nav></header>
 <main style="padding: 0 0 6rem">
 <div style="padding: 0 clamp(1.25rem, 5vw, 4rem); max-width: 68rem; margin-top: 3rem">
 <h1 style="font-size: clamp(2.6rem, 8vw, 6.5rem); line-height: 0.98; letter-spacing: -0.025em; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; margin: 0 0 2rem; font-style: italic">Other <em style="font-style: italic;">things</em></h1>
-<p style="max-width: 44rem; color: #002FE5; font-family: 'My Hand', cursive; font-size: 1.8rem; line-height: 1.3; margin: 0 0 3rem">[A line about what lives here: side projects, illustration, talks, writing.]</p>
+<p style="max-width: 44rem; color: #FFFFFF; font-family: 'My Hand', cursive; font-size: 1.8rem; line-height: 1.3; margin: 0 0 3rem">A gallery wall of things I've made for posterity.</p>
 </div>
 
 <div class="tiles">
+<div class="tile feature">
+<div class="pic"><img src="/media/other-hand-table.webp" alt="A pale wooden coffee table shaped like a giant hand, set with candles, wine and snacks, as friends gather around it"></div>
+<div class="pic vid"><video controls="" muted="" playsinline="" preload="metadata" poster="/media/other-hand-table-video-poster.webp" aria-label="Making the hand table: from picking up wood at the hardware store to the finished table"><source src="/media/other-hand-table-video.mp4" type="video/mp4"></video></div>
+<div class="txt">
+<span class="kicker">Featured</span>
+<p>By far my most ambitious project - a coffee table from scratch. Check out the video for the process.&nbsp;</p>
+</div>
+</div>
 <div class="tile s4">
 <div class="pic"><img src="/media/other-music-1.webp" alt="A band on stage under red light, with guitars and a dholak, in front of a big screen of glowing market stalls"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>A memorable gig with my band - Yatri</p>
 </div>
 </div>
-<div class="tile s2">
-<div class="pic"><img src="/media/other-music-2.webp" alt="Keyuri singing into a mic on stage under purple and green lights, beside a guitarist with a purple guitar"></div>
-<div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
-</div>
-</div>
+
 <div class="tile s2">
 <div class="pic"><img src="/media/other-collage-1.webp" alt="Paper-collage portrait: a smiling woman with many arms, in a blazer over a red silk sari, sits on a stool before a gold and marble arch, holding a book, microphone, phone, torch and scroll"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>Ummmmm</p>
 </div>
 </div>
 <div class="tile s4">
 <div class="pic"><img src="/media/other-ink-1.webp" alt="Ink and marker drawing: a bearded man lounges with one leg raised, holding a pencil and a takeaway box, with BUT FIRST lettered on his thigh and dishes around him"></div>
 <div class="txt">
-<h3>But First</h3>
-<p>[A line about this piece.]</p>
+<p>But first, vote</p>
 </div>
 </div>
 <div class="tile s3">
 <div class="pic"><img src="/media/other-zine-1.webp" alt="Zine spread on the Indian farm laws: what the government wants on cream paper beside why farmers are protesting on a soil-textured page, all hand-lettered"></div>
 <div class="txt">
-<h3>What the Government Wants, Why Farmers Are Protesting</h3>
-<p>[A line about this zine: what it’s about and why you made it.]</p>
+<p>A zine about the farmers' protests in India</p>
 </div>
 </div>
 <div class="tile s3">
 <div class="pic"><img src="/media/other-zine-2.webp" alt="Zine spread: A Typical Indian Farmer lettered on a soil-textured page, beside a hand-drawn persona card for Kisaan with his bio, goals, wants and needs, and frustrations"></div>
 <div class="txt">
-<h3>A Typical Indian Farmer</h3>
-<p>[A line about this spread.]</p>
+<p>A zine about the farmers' protests in India</p>
 </div>
 </div>
-<div class="tile s2">
-<div class="pic"><img src="/media/other-cafe-1.webp" alt="Cafe-Folk poster on yellow: a bearded man in a pink polo writes at a café table while coffee drips into his arm from an IV drip"></div>
-<div class="txt">
-<h3>The Caffeinator</h3>
-<p>[A line about this piece.]</p>
-</div>
-</div>
-<div class="tile s2">
-<div class="pic"><img src="/media/other-cafe-2.webp" alt="Cafe-Folk poster on green: a woman with a purple bun reels off a long custom order, with its list of modifiers floating beside her"></div>
-<div class="txt">
-<h3>The Specifier</h3>
-<p>[A line about this piece.]</p>
-</div>
-</div>
-<div class="tile s2">
-<div class="pic"><img src="/media/other-cafe-3.webp" alt="Cafe-Folk poster on blue: a man in headphones works on a laptop from a café armchair wired with cables and a wifi signal"></div>
-<div class="txt">
-<h3>The Wired One</h3>
-<p>[A line about this piece.]</p>
-</div>
-</div>
+
+
+
 <div class="tile s2">
 <div class="pic"><img src="/media/other-ink-4.webp" alt="Digital drawing: a woman in a green sweater with many arms and legs juggles a broom, mop, wine, cleaning spray, paint brushes and toilet rolls, with a cat on her head"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>A lonely christmas</p>
 </div>
 </div>
 <div class="tile s2">
 <div class="pic"><img src="/media/other-swab-1.webp" alt="Ink drawing on textured paper: a woman with a stippled face and a loopy swab threaded through her head, as a blue-gloved hand pulls the swab from her ear"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>1.</p>
 </div>
 </div>
 <div class="tile s2">
 <div class="pic"><img src="/media/other-swab-2.webp" alt="Ink drawing on textured paper: a hand in a dusty-pink sleeve holds a phone that reads Test results: you are body positive"></div>
 <div class="txt">
-<h3>Test Results</h3>
-<p>[A line about this piece.]</p>
+<p>2.</p>
 </div>
 </div>
 <div class="tile s2">
 <div class="pic"><img src="/media/other-illo-1.webp" alt="Painted illustration on kraft paper: a woman in a black swimsuit sits on a collaged yellow export carton, looking back over her shoulder and stirring a glass"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece: medium, year, or the story behind it.]</p>
+<p>Parle-G</p>
 </div>
 </div>
 <div class="tile s2">
 <div class="pic"><img src="/media/other-illo-2.webp" alt="Painted illustration on kraft paper: a bearded man in a white T-shirt lounges on a wooden chair holding candy cigarettes, with a red box of Phantom sweet cigarettes at his feet"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece: medium, year, or the story behind it.]</p>
+<p>Phantom Cigarettes</p>
 </div>
 </div>
 <div class="tile s2">
 <div class="pic"><img src="/media/other-ink-2.webp" alt="Ink and marker drawing: a woman in a backwards cap points at a letter while holding a pencil, sitting beside a plate of noodles, cake and wine, with BUT FIRST lettered beside her"></div>
 <div class="txt">
-<h3>But First</h3>
-<p>[A line about this piece.]</p>
+<p>But first, vote</p>
 </div>
 </div>
-<div class="tile s3">
-<div class="pic"><img src="/media/other-plush-1.webp" alt="A plush vada pav sewn from felt and fleece: white pav buns, a golden vada dotted with red, and a green chilli, sitting on a grey sofa"></div>
-<div class="txt">
-<h3>Vada Pav</h3>
-<p>[A line about this piece: materials, or the story behind it.]</p>
-</div>
-</div>
-<div class="tile s3">
-<div class="pic"><img src="/media/other-living-room.webp" alt="A bright living room with a concrete ceiling, a framed photo of Earth, a standing desk, a woven leather chair and a monstera"></div>
-<div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
-</div>
-</div>
-<div class="tile s2">
-<div class="pic"><img src="/media/other-cafe-4.webp" alt="Cafe-Folk poster on plum: a pink-haired woman sips a whipped drink behind a table of doughnut, cake, croissants and coffee"></div>
-<div class="txt">
-<h3>The Sugar Baby</h3>
-<p>[A line about this piece.]</p>
-</div>
-</div>
-<div class="tile s2">
-<div class="pic"><img src="/media/other-cafe-5.webp" alt="Cafe-Folk poster on red: a woman with green hair curls up reading inside a giant glass coffee cup"></div>
-<div class="txt">
-<h3>The Reader</h3>
-<p>[A line about this piece.]</p>
-</div>
-</div>
+
+
+
+
 <div class="tile s2">
 <div class="pic"><img src="/media/other-cora-zine.webp" alt="A small black zine titled When Cora Went Missing, with a white cat curling around the lettering"></div>
 <div class="txt">
-<h3>When Cora Went Missing</h3>
-<p>[A line about this piece.]</p>
+<p>A zine about when we lost (and found) our cat Cora</p>
 </div>
 </div>
 <div class="tile s3">
 <div class="pic"><img src="/media/other-pencil-1.webp" alt="Coloured-pencil drawing: a woman with long blue hair and headphones, in a striped green sari, types on a laptop resting on cinder blocks"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>I love my sarees</p>
 </div>
 </div>
 <div class="tile s3">
 <div class="pic"><img src="/media/other-notebooks.webp" alt="Printed notebooks in yellow, pink and white with Hindi lettering and an illustration of a woman in a sari tending potted plants"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>Sexy how I know it</p>
 </div>
 </div>
 <div class="tile s2">
 <div class="pic"><img src="/media/other-habit-sliders-1.webp" alt="A column of black wall-mounted sliders labelled Feed Pet, Drink Water, Move Body and Water Plants, each with a pink or green dot, as a hand slides one across"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>Little switches to remind me of tasks</p>
 </div>
 </div>
 <div class="tile s2">
 <div class="pic"><img src="/media/other-habit-sliders-2.webp" alt="Close-up of two sliders: Drink Water 8x next to a pink dot, and Move Body slid over to a green dot"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
-</div>
-</div>
-<div class="tile s2">
-<div class="pic"><img src="/media/other-hand-table.webp" alt="A pale wooden coffee table shaped like a giant hand, set with candles, wine and snacks, as friends gather around it"></div>
-<div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>Little switches to remind me of tasks</p>
 </div>
 </div>
 <div class="tile s3">
 <div class="pic"><img src="/media/other-ink-3.webp" alt="Ink and marker drawing: a man in glasses curled up in black, wrapped in many arms holding towels, a phone and a note, among leafy sprigs"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>Ew David</p>
 </div>
 </div>
 <div class="tile s3">
 <div class="pic"><img src="/media/other-kolam-cake.webp" alt="A chocolate cake piped with a white kolam pattern, on a table set with food"></div>
 <div class="txt">
-<h3>[Title]</h3>
-<p>[A line about this piece.]</p>
+<p>A filter coffee cheescake for a South Indian themed party</p>
 </div>
 </div>
 </div>
