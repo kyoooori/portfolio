@@ -32,6 +32,8 @@ a:focus-visible{outline:3px solid #3340F0;outline-offset:-3px}
 .fact .dot{flex:none;width:8px;height:8px;border-radius:50%;background:#F7A8E4}
 .fact b{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-.02em}
 @media(max-width:600px){.facts{padding:28px 1.25rem 32px;flex-direction:column;align-items:flex-start}.fact b{font-size:30px}.fact svg{width:26px;height:26px}}
+.result{margin:.6rem 0 0;padding:14px 18px;border-radius:10px;background:#FFFFFF;border:1px solid #E2E3EA;font-size:17px;line-height:1.45;font-weight:400;color:#15171F;max-width:44ch}
+.result b{font-weight:600;color:#3340F0}
 .mind{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid #E2E3EA}
 .mind-item{padding:36px 40px 40px;border-right:1px solid #E2E3EA;border-top:1px solid #E2E3EA;display:flex;flex-direction:column;gap:.75rem}
 .mind-item .img{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#F1EDE3;display:flex;align-items:center;justify-content:center;color:#8A8D99;font-size:14px;margin-bottom:.5rem}
@@ -134,6 +136,7 @@ main{overflow-x:clip}
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
 <h3 style="margin: 0 0 1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: italic">Building A Reusable Global Search Pattern</h3>
 <p style="margin: 0; font-family: 'Inter', system-ui, sans-serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #4A4D5A; max-width: 44ch">Redesigning the most-used, most-complained-about feature in OpenGov’s permitting software. Faster paths to records and locations, shipped in three months.</p>
+<p class="result">Time from search to a location page: <b>1m 7s → 35s</b></p>
 <p style="margin: auto 0 0; padding-top: 0.4rem; display: flex; gap: 1.25rem; font-size: 0.85rem; color: #6B6E7B"><span>2023–24</span><span>OpenGov</span></p>
 </div>
 </a>
@@ -147,6 +150,7 @@ main{overflow-x:clip}
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
 <h3 style="margin: 0 0 1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: italic"><i>Designing A Connection Between Government Records To Reflect Real-World Relationships</i></h3>
 <p style="margin: 0; font-family: 'Inter', system-ui, sans-serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #4A4D5A; max-width: 44ch">Connecting records that used to live in silos in OpenGov’s permitting software, so parent and child permits share information and wait on each other’s workflows.</p>
+<p class="result"><b>24 interviews, 10 communities</b>, and a live customer setup at a user group</p>
 <p style="margin: auto 0 0; padding-top: 0.4rem; display: flex; gap: 1.25rem; font-size: 0.85rem; color: #6B6E7B"><span>2025</span><span>OpenGov</span></p>
 </div>
 </a>
