@@ -8,7 +8,7 @@
 <link rel="icon" href="/media/logo-hand.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#2B2B2B}
 a{color:inherit}
@@ -16,42 +16,66 @@ a{color:inherit}
 a:focus-visible{outline:3px solid #9BA3FF;outline-offset:3px}
 article p{margin:0 0 1.1rem}
 article>p,article>h2,article>h3,article>ul,article>blockquote,article>.lede{max-width:44rem}
-article h2{margin:3.5rem 0 1rem;font-size:2rem;letter-spacing:-.015em;line-height:1.15;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-weight:500;font-style:normal}
-article h3{margin:2.5rem 0 .6rem;font-size:1.5rem;line-height:1.2;letter-spacing:-.01em;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-weight:500;font-style:normal}
+article h2{margin:3.5rem 0 1rem;font-size:2rem;letter-spacing:-.015em;line-height:1.15;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-style:normal}
+article h3{margin:2.5rem 0 .6rem;font-size:1.5rem;line-height:1.2;letter-spacing:-.01em;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-style:normal}
 article>ul{padding-left:1.2rem;margin:0 0 1.5rem}article>ul li{margin-bottom:.5rem}
 figure{margin:2.5rem 0}figure img,figure video{width:100%;height:auto;display:block;background:transparent}
-figcaption{margin-top:.6rem;color:#B4B6BF;font-size:.9rem}
+figcaption{margin-top:.6rem;color:#FFFFFF;font-size:.9rem}
 .grid{display:grid;gap:1.25rem;margin:2.5rem 0}.grid figure{margin:0}
 .g1{grid-template-columns:minmax(0,1fr)}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1.5rem;margin:2.5rem 0;padding:1.5rem 0;border-top:1px solid #4A4B50;border-bottom:1px solid #4A4B50}
-.meta dt{color:#B4B6BF;font-size:.9rem;margin-bottom:.3rem}.meta dd{margin:0}
+.meta dt{color:#FFFFFF;font-size:.9rem;margin-bottom:.3rem}.meta dd{margin:0}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.5rem;margin:0 0 2.5rem}
 .stats b{display:block;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;letter-spacing:-.03em;color:#9BA3FF}
-.stats span{display:block;margin-top:.5rem;color:#B4B6BF;font-size:.95rem}
+.stats span{display:block;margin-top:.5rem;color:#FFFFFF;font-size:.95rem}
 blockquote{margin:2rem 0;padding:0 0 0 1.25rem;border-left:3px solid #9BA3FF;font-size:1.25rem;line-height:1.45}
-blockquote cite{display:block;margin-top:.6rem;font-size:.9rem;font-style:normal;color:#B4B6BF}
-.note{color:#B4B6BF;font-size:.9rem;max-width:44rem}
+blockquote cite{display:block;margin-top:.6rem;font-size:.9rem;font-style:normal;color:#FFFFFF}
+.note{color:#FFFFFF;font-size:.9rem;max-width:44rem}
 @media(max-width:600px){.g2,.g3{grid-template-columns:1fr}}
+article>h2{max-width:none!important}
+article h2{margin:9rem 0 3.5rem;padding-top:2.5rem;border-top:1px solid #4A4B50;font-size:2.25rem}
+article h2::before{content:"";display:block;width:8px;height:8px;border-radius:50%;background:#F7A8E4;margin-bottom:1.25rem}
+.beat{max-width:22ch!important;margin:6.5rem 0 4.5rem;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-size:clamp(2rem,3.8vw,3.25rem);line-height:1.08;letter-spacing:-.025em}
+h2+.beat{margin-top:0}
+.cs-item{margin:0 0 7rem}
+.cs-item+.cs-item.cs-cont{margin-top:-4.5rem}
+.cs-item>h3{margin:0 0 1.1rem;max-width:30ch;font-size:1.75rem;line-height:1.2}
+.cs-item>p{max-width:40rem;line-height:1.7;margin-bottom:1rem}
+.cs-fig{margin:2.75rem 0 0}
+.cs-fig a{display:block}
+.cs-fig img{border-radius:12px;width:100%;height:auto}
+.cs-fig figcaption,.cs-cap{margin-top:1rem;color:#FFFFFF;font-size:.95rem;line-height:1.55;max-width:40rem}
+.cs-grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem 2rem;margin-top:2.75rem}.cs-grid2 .cs-fig{margin:0}
+.cs-stats{margin:2.25rem 0 0!important;gap:2rem!important}
+.cs-chips{list-style:none;padding:0;margin:1.75rem 0 0;display:flex;flex-wrap:wrap;gap:.75rem}
+.cs-chips li{padding:8px 18px;border-radius:99px;background:#FDCFF3;color:#000000;font-size:1rem}
+.cs-ol{max-width:40rem;padding-left:1.4rem;margin:1.5rem 0 0;line-height:1.7}.cs-ol li{margin-bottom:.75rem}
+.cs-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:2.75rem 2.5rem;margin:2.25rem 0 0}
+.cs-cols>div{border-top:1px solid #4A4B50;padding-top:1.25rem}
+.cs-cols h4{margin:0 0 .75rem;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-size:1.25rem;line-height:1.25;letter-spacing:-.01em}
+.cs-cols p{margin:0;font-size:1rem;line-height:1.65}
+.cs-item blockquote{max-width:40rem;margin:2.25rem 0}
+@media(max-width:600px){.cs-grid2{grid-template-columns:1fr}.beat{margin:4.5rem 0 3rem}article h2{margin-top:6rem}.cs-item{margin-bottom:5rem}.cs-item+.cs-item.cs-cont{margin-top:-3rem}}
 
-.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Inter',system-ui,sans-serif;font-size:18px;font-weight:300;color:#F2F2F2}
+.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:300;color:#FFFFFF}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-.site-header .name{text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#F2F2F2}
+.site-header .name{text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#FFFFFF}
 .menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
 .menu-btn .trig{position:relative;display:block;width:87px;height:60px}
-.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#F2F2F2}
+.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#FFFFFF}
 .site-header.light .menu-btn .trig i{background:#37383F}
 .menu-btn .trig img{position:absolute;left:15.6px;top:5px;width:65px;height:41px;display:block}
 .site-menu{position:absolute;top:96px;right:clamp(1.25rem,5vw,4rem);width:280px;display:flex;flex-direction:column;padding:0;background:#2B2B2B;border:1px solid #55527E;border-radius:0;box-shadow:0 12px 32px rgba(0,0,0,.10)}
 .site-menu[hidden]{display:none}
-.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#F2F2F2;transition:background-color .2s}
+.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#FFFFFF;transition:background-color .2s}
 .site-menu a:last-child{border-bottom:0}
 .site-menu a::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:transparent}
 .site-menu a[aria-current="page"]::before{background:#F7A8E4}
-.site-menu a:hover{background:#FDCFF3;color:#15171F}
-.site-header.light{color:#15171F;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
-.site-header.light .name{color:#15171F}
+.site-menu a:hover{background:#FDCFF3;color:#000000}
+.site-header.light{color:#000000;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.site-header.light .name{color:#000000}
 .site-header.light .site-menu{background:#FFFCF5;border-color:#E2E3EA}
-.site-header.light .site-menu a{color:#15171F;border-color:#E2E3EA}
+.site-header.light .site-menu a{color:#000000;border-color:#E2E3EA}
 .site-header.light .site-menu a:hover{background:#FDCFF3}
 body{overflow-wrap:break-word}
 main{overflow-x:clip}
@@ -60,17 +84,17 @@ main{overflow-x:clip}
 </style>
 </head>
 <body>
-<div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
-<div class="hero" style="color: #15171F; background-color: #FFFCF5">
+<div style="min-height: 100vh; background: #2B2B2B; color: #FFFFFF; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; line-height: 1.6; font-weight: 300">
+<div class="hero" style="color: #000000; background-color: #FFFCF5">
 <header class="site-header light"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:13px"></i><i style="top:21px"></i><i style="top:29px"></i><img src="/media/menu-hand.png" alt=""></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
 <div style="padding: 3rem clamp(1.25rem, 5vw, 4rem) 3.5rem">
 <div style="max-width: 68rem; position: relative; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px">
 <span style="color: #000000; font-weight: 600">2023–24</span>
 <div class="title-wrap" style="display: table">
-<h1 style="font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; max-width: 22ch; margin: 0.5rem 0 0; font-style: normal">Building A Reusable <br>Global Search Pattern</h1>
+<h1 style="font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; max-width: 22ch; margin: 0.5rem 0 0; font-style: normal">Building A Reusable <br>Global Search Pattern</h1>
 <div aria-hidden="true" style="height: 2px; background: #FDCFF3; margin: 1.75rem 0"></div>
 </div>
-<p class="lede" style="margin: 0; max-width: 44rem; color: #002FE5; font-family: 'My Hand', cursive; font-size: 1.8rem; line-height: 1.3">Redesigning the most-used and most-complained-about feature in OpenGov’s permitting software, so staff reach the right record or location faster.</p></div>
+<p class="lede" style="margin: 0; max-width: 44rem; color: #000000; font-family: 'Playfair Display', Georgia, serif; font-size: 1.8rem; line-height: 1.3">Redesigning the most-used and most-complained-about feature in OpenGov’s permitting software, so staff reach the right record or location faster.</p></div>
 </div>
 </div>
 <main style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem; margin-top: 120px">
@@ -96,96 +120,222 @@ main{overflow-x:clip}
 <h2>Overview</h2>
 <p>OpenGov’s Permitting &amp; Licensing product (PLC) helps local governments run permits, licenses and code enforcement. Search is how staff get to nearly everything in it. In a single 30-day window in 2023, 8,070 users across 445 accounts clicked into search 870,000 times. It was also the feature people complained about most.</p>
 <p>I led the redesign as the only designer, working with one PM and two engineers. We shipped in three months. The new search lives in the global navigation, and I designed it as a pattern that other OpenGov products can reuse.</p>
-<figure><img src="/media/gs-01-context-usage.webp" alt="Search is one of our most used features, also most complained about: 8,070 users, 445 accounts, 870 thousand clicks in 30 days"><figcaption>Search usage in the 30 days before the project began (2023).</figcaption></figure>
 
-<h2>Problem</h2>
-<p>Research surfaced five pain points. Staff described a search that was slow, especially on busy afternoons while they were on the phone with a resident. It returned too many results with the wrong ones on top. It sometimes missed records that existed, and it was inconsistent: typing an exact record number did not reliably put that record first. Input was rigid, with no filters and no tolerance for misspellings, which is an industry standard.</p>
-<blockquote>“Too many results at a time, and properties are at the bottom, which is often what we’re looking for.”<cite>Customer interview</cite></blockquote>
-<p>Separately, the old search was not accessible: you could not tab into the results once you had searched.</p>
-<div class="grid g2">
-<figure><img src="/media/gs-03-problem-slow.webp" alt="Problem: very slow, with a customer quote about waiting on the phone"></figure>
-<figure><img src="/media/gs-04-problem-relevance.webp" alt="Problem: low relevance of results, with a customer quote"></figure>
-<figure><img src="/media/gs-08-problem-inaccessible.webp" alt="Problem: inaccessible tabbing pattern"></figure>
-<figure><img src="/media/gs-11-pain-points.webp" alt="The five pain points: low result relevance, slow performance, search isn't searching, inconsistent results, inflexible and rigid input"></figure>
-</div>
 
+<h2>Context</h2>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-019.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-019.webp" alt="Search in PLC, before the redesign." width="1600" height="602" loading="lazy" decoding="async"></a><figcaption>Search in PLC, before the redesign.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Outline</h3>
+<div class="cs-cols"><div><h4>Team</h4><p>1 Designer<br>1 PM<br>1 Front-end engineer<br>1 Back-end engineer</p></div><div><h4>Timeline</h4><p>3 months (shipped)</p></div><div><h4>My role</h4><p>Lead Product Designer, solo</p></div><div><h4>Complexity</h4><p>4/10</p></div><div><h4>Personas</h4><p>Administrator<br>IT Head<br>Permit Tech<br>Inspector</p></div></div>
+</section>
+<section class="cs-item">
+<h3>Search is one of our most used features. Also most complained about.</h3>
+<p>In the last 30 days (2023).</p>
+<div class="stats cs-stats"><div><b>8,070</b><span>Users</span></div><div><b>445</b><span>Accounts</span></div><div><b>870k</b><span>Clicks</span></div></div>
+</section>
 <h2>Research</h2>
-<p>Everyone uses search on other platforms, so everyone has opinions about it. That made it more important to hear from the people who depend on it most. I filtered our user list to the accounts with the most clicks on the PLC search bar, then ran 19 interviews over three rounds, averaging 48 minutes each. Eight were internal and eleven were customers, across eight communities.</p>
-<p>I summarized every conversation, pulled direct quotes, and tagged use cases so I could see which problems came up again and again.</p>
-<figure><img src="/media/gs-02-research-numbers.webp" alt="Research in numbers: 19 interviews, 3 rounds, 48 minute average, 8 communities, 8 internal, 11 external users"></figure>
-
-<h2>Key insight: think location, seek record</h2>
-<p>People are usually looking for a record, but they think and organize information by location. As a teammate who used to work in a building department put it:</p>
-<blockquote>“When I was in building departments all day, every day, we didn’t really talk about record numbers. We talked about locations.”<cite>A teammate and former building-department staffer</cite></blockquote>
-<p>In every interview, people described searching for the same four kinds of things: records, locations, people and projects. Yet properties were ending up at the bottom of the results, even though locations are what people think in. That became the first of the design criteria.</p>
-<figure><img src="/media/gs-10-four-object-types.webp" alt="All users talked about the same objects they were searching for: record, location, person, project"></figure>
-<figure><img src="/media/gs-12-design-criteria.webp" alt="Design criteria: think location seek record, find faster, visibility through metadata, flexibility through filters"></figure>
-<ul>
-<li><strong>Think location. Seek record.</strong> Let people start from where something is and still land on the record.</li>
-<li><strong>Find faster.</strong> Results that earn their position.</li>
-<li><strong>Visibility.</strong> Show more metadata, such as the business name Licensing users kept asking for, without making rows heavy.</li>
-<li><strong>Flexibility.</strong> Filters to narrow down, but good results even when nobody applies one.</li>
-</ul>
-
+<section class="cs-item">
+<h3>Who can we talk to?</h3>
+<p>We filtered our user list to the ones that had the highest number of clicks on the search bar in PLC.</p>
+<figure class="cs-fig" style="max-width:664px"><a href="/media/cs/crop-022.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-022.webp" alt="Who can we talk to? We filtered our user list to the ones that had the highest number of clicks on the" width="886" height="506" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>PLC designers are lucky</h3>
+<div class="stats cs-stats"><div><b>19</b><span>Interviews</span></div><div><b>3</b><span>Rounds</span></div><div><b>48</b><span>Avg. length (min)</span></div><div><b>8</b><span>Communities</span></div><div><b>8</b><span>Internal</span></div><div><b>11</b><span>External (users)</span></div></div>
+<figure class="cs-fig" style="max-width:780px"><a href="/media/cs/crop-023.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-023.webp" alt="PLC Designers are lucky 19 3" width="1040" height="566" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Voice of a user</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-024.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-024.webp" alt="Excerpt and interview summary." width="1600" height="498" loading="lazy" decoding="async"></a><figcaption>Excerpt and interview summary.</figcaption></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-025.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-025.webp" alt="Voice of a user Excerpt Interview summary" width="1596" height="494" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-026.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-026.webp" alt="Voice of a user Excerpt Interview summary" width="1598" height="500" loading="lazy" decoding="async"></a></figure>
+</section>
+<h2>Problem space</h2>
+<p class="beat">The problem was pretty clear.</p>
+<section class="cs-item">
+<h3>Very slow</h3>
+<p>The search function is described as slow or sluggish, which becomes particularly frustrating when users are on a call with a customer or need to quickly access information. High server usage times, such as around 3:00 PM, seem to make this worse.</p>
+<blockquote>“So sometimes I’ll be on the phone, I’m like, hang on. My system is a little slow and then I’m waiting for it to load and then I can go in and access what it is that they need, primarily in the inspection step.”<cite>Customer interview</cite></blockquote>
+</section>
+<section class="cs-item">
+<h3>Low relevance of results</h3>
+<p>It often yields too many results, making it difficult to find the most recent or relevant application or record. Users have to comb through multiple results, sometimes running into outdated information.</p>
+<blockquote>“Too many results at a time, and properties are at the bottom, which is often what we’re looking for.”<cite>Customer interview</cite></blockquote>
+</section>
+<section class="cs-item">
+<h3>Search isn’t searching</h3>
+<p>Users report that the search sometimes does not return the items they are looking for, even when the items exist in the system.</p>
+<figure class="cs-fig" style="max-width:568px"><a href="/media/cs/crop-030.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-030.webp" alt="Search isn’t searching Result Users report that the search sometimes does" width="757" height="328" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Inconsistent results</h3>
+<p>The search experience is inconsistent. For example, typing the exact record number does not always lead to the record showing up at the top of the results.</p>
+<figure class="cs-fig" style="max-width:588px"><a href="/media/cs/crop-031.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-031.webp" alt="Inconsistent results The search experience is inconsistent. For example, typing the exact record number does" width="784" height="333" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>The hunt and peck</h3>
+<p>More often than not, our users are looking for a record. However, they think and organize information mentally in the form of addresses or locations.</p>
+<figure class="cs-fig" style="max-width:646px"><a href="/media/cs/crop-032.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-032.webp" alt="The hunt and peck One key insight we uncovered was that more often than not, our users are looking for a" width="862" height="479" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Inflexible and rigid input</h3>
+<p>Users wish for more refined search capabilities, including the ability to filter by specific criteria like record number, address or applicant.</p>
+<p>There are difficulties when searching for specific details like project names or addresses, with the system sometimes not recognizing them.</p>
+<p>Additionally, our search is not able to identify intent if inputs are misspelled, which is an industry standard.</p>
+<figure class="cs-fig" style="max-width:590px"><a href="/media/cs/crop-033.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-033.webp" alt="Inflexible &amp; Rigid Input Users wish for more refined search capabilities, Project name" width="786" height="415" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Inaccessible</h3>
+<p>The tabbing pattern in the current search doesn’t let you tab into the results once searched.</p>
+<p>Additionally, the icons indicating the object type for a search result fail to meet WCAG color contrast standards.</p>
+<figure class="cs-fig" style="max-width:818px"><a href="/media/cs/crop-034.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-034.webp" alt="Inaccessible The tabbing pattern in the current Search doesn’t let you tab into the results" width="1091" height="533" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Good things take time. What about bad things?</h3>
+<figure class="cs-fig" style="max-width:776px"><a href="/media/cs/crop-035.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-035.webp" alt="The legacy search in Pendo: 0.17% visitor completion rate and a median of 25 seconds to complete." width="1034" height="530" loading="lazy" decoding="async"></a><figcaption>The legacy search in Pendo: 0.17% visitor completion rate and a median of 25 seconds to complete.</figcaption></figure>
+</section>
+<p class="beat">A couple of interesting things.</p>
+<section class="cs-item">
+<h3>Often, users are telling us exactly what they need. In ALL CAPS.</h3>
+<figure class="cs-fig" style="max-width:840px"><a href="/media/cs/crop-037.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-037.webp" alt="Often, users are telling us exactly what they need. In ALL CAPS." width="1120" height="523" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Think location. Seek record.</h3>
+<p>One key insight we uncovered was that more often than not, our users are looking for a record. However, they think and organize information mentally in the form of addresses or locations.</p>
+<blockquote>“Well, I think it’s because when you’re in a building department, you’re talking about locations. That’s the thing that you’re talking about. When I was in building departments all day, every day, we didn’t really talk about record numbers. We talked about locations.”<cite>A teammate and former building-department staffer</cite></blockquote>
+</section>
+<section class="cs-item">
+<h3>All users talked about the same objects they were searching for.</h3>
+<ul class="cs-chips"><li>Record</li><li>Location</li><li>Person</li><li>Project</li></ul>
+</section>
+<section class="cs-item">
+<h3>Tagging use cases was helpful</h3>
+<figure class="cs-fig" style="max-width:896px"><a href="/media/cs/crop-040.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-040.webp" alt="Tagging use cases was helpful" width="1195" height="531" loading="lazy" decoding="async"></a></figure>
+</section>
 <h2>Design</h2>
-<p>Another product had already explored some search designs, which gave me a head start. I took four directions through the criteria above, and option 4 won. The workflow and heads-up area around search were outside my scope, so I focused on search itself.</p>
-<figure><img src="/media/gs-13-option-4-winner.webp" alt="Option 4 was the winner"></figure>
-
-<h3>One row per object, with the right metadata</h3>
-<p>Locations, records, projects and accounts each get a row that shows the fields people use to tell results apart, and highlights which searchable field matched the input. I mapped out what each object type shows in the row and what appears on hover.</p>
-<div class="grid g1">
-<figure><img src="/media/gs-14-design-rows.webp" alt="Result rows for location, record, project and account, with metadata and relevance of input"></figure>
-<figure><img src="/media/gs-18-metadata-matrix.webp" alt="Metadata matrix: what each object type shows as primary, search-based and secondary fields"></figure>
-</div>
-
-<h3>Start before you type, narrow as you go</h3>
-<p>Recently viewed items appear as soon as search opens, and filters for each object type let people drill down to exactly what they want while the unfiltered results stay good.</p>
-<div class="grid g2">
-<figure><img src="/media/gs-15-recent-and-icons.webp" alt="Quick access to recently viewed items, with icons for each object type"></figure>
-<figure><img src="/media/gs-16-filters.webp" alt="Filters to drill down to a specific type of object"></figure>
-</div>
-
-<h3>Context without leaving the list</h3>
-<p>A preview panel shows more detail on hover, and each object type surfaces what matters for it: searchable fields and status for records, recently updated records for locations, and so on.</p>
-<div class="grid g2">
-<figure><img src="/media/gs-19-hover-context.webp" alt="Hover previews for each object type"></figure>
-<figure><img src="/media/gs-20-context-per-object.webp" alt="The right context for record, location and account"></figure>
-</div>
-
-<h3>The details</h3>
-<p>Clear states for data that is unavailable or not found, multi-line searchable fields, and a small-screen version where tapping the info icon opens the preview panel and metadata scrolls horizontally. Keyboard navigation got its own design pass, including where the tabbing guides should live (top, on hover, in the empty state, or at the bottom), which I worked through with engineering.</p>
-<div class="grid g3">
-<figure><img src="/media/gs-17-little-things.webp" alt="States for unavailable data and multi-line searchable fields"></figure>
-<figure><img src="/media/gs-21-small-devices.webp" alt="Search on small devices with a preview panel and horizontal scroll"></figure>
-<figure><img src="/media/gs-22-keyboard-nav.webp" alt="Keyboard navigation callouts"></figure>
-</div>
-<figure><img src="/media/gs-23-finale.webp" alt="The finished experience in context on a record page"></figure>
-
-<h2>Results</h2>
-<p>I tested the design with users on tasks like finding a dog registration permit by the pet’s name, finding an applicant by address, and opening and using search with only the keyboard. After launch I compared product analytics before and after.</p>
-<p><strong>Faster to the destination.</strong> The median time from search to a location page fell from 1 minute 7 seconds to 35 seconds. From search to a record, the median fell from 25 seconds to 15 seconds.</p>
-<div class="grid g1">
-<figure><img src="/media/gs-26-search-to-location.webp" alt="Search to location: legacy search 1m 7s versus new search 35s"></figure>
-<figure><img src="/media/gs-27-making-faster.webp" alt="Funnel comparison: legacy search versus new search, median time to complete 25 seconds versus 15 seconds"></figure>
-</div>
-<p><strong>More use.</strong> Comparing October 2023 with October 2024, unique visitors grew from 7,558 to 9,845 and accounts from 418 to 502. Search clicks rose from 912K to 1.01M, and the share of accounts using search went from 74% to 79.1%. The share of visitors using it held steady at about 54%.</p>
-<div class="grid g1">
-<figure><img src="/media/gs-24-feature-clicks.webp" alt="Feature analytics, October 2023 versus October 2024"></figure>
-<figure><img src="/media/gs-25-search-to-record.webp" alt="Most common path from search to a record, legacy versus new search"></figure>
-</div>
-<p class="note">Before-and-after comparisons use different date windows: the legacy funnel was measured over July 2023 and the new funnel over a recent 30 days.</p>
-
+<p class="beat">So what was I building?</p>
+<section class="cs-item">
+<h3>These were the pain points</h3>
+<ul class="cs-chips"><li>Low result relevance</li><li>Slow performance</li><li>Search isn’t searching</li><li>Inconsistent results</li><li>Inflexible and rigid input</li></ul>
+</section>
+<section class="cs-item">
+<h3>To the design criteria</h3>
+<div class="cs-cols"><div><h4>Think location. Seek record.</h4><p>One key insight we uncovered was that more often than not, our users are looking for a record. However, they think and organize information mentally in the form of addresses or locations.</p></div><div><h4>Find faster</h4><p>A Microsoft study revealed that we now have an attention span of eight seconds, shorter than that of a goldfish (nine seconds).</p></div><div><h4>Visibility: metadata</h4><p>Users want to see more results, and as much metadata as possible in search results. DBA or business name is a recurring ask from Licensing users. How do we design results that provide more metadata and still feel lightweight?</p></div><div><h4>Flexibility: filters</h4><p>Users want the ability to filter down their results and tell us more about what they’re looking for. However, the design must provide good quality results even when no filters are applied.</p></div></div>
+</section>
+<p class="beat">Another product had some designs.</p>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-045.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-045.webp" alt="Slide" width="1597" height="459" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-046.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-046.webp" alt="Slide" width="1595" height="451" loading="lazy" decoding="async"></a></figure>
+</section>
+<p class="beat">Great, I had a head start.</p>
+<section class="cs-item">
+<p>The workflow and heads-up area were not part of my design.</p>
+<div class="cs-grid2"><figure class="cs-fig"><a href="/media/cs/crop-048.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-048.webp" alt="Option 1" width="1596" height="805" loading="lazy" decoding="async"></a><figcaption>Option 1</figcaption></figure><figure class="cs-fig"><a href="/media/cs/crop-049.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-049.webp" alt="Option 2" width="1595" height="805" loading="lazy" decoding="async"></a><figcaption>Option 2</figcaption></figure><figure class="cs-fig"><a href="/media/cs/crop-050.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-050.webp" alt="Option 3" width="1595" height="805" loading="lazy" decoding="async"></a><figcaption>Option 3</figcaption></figure><figure class="cs-fig"><a href="/media/cs/crop-051.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-051.webp" alt="Option 4" width="1595" height="805" loading="lazy" decoding="async"></a><figcaption>Option 4</figcaption></figure></div>
+</section>
+<p class="beat">Option 4 was the winner.</p>
+<p class="beat">I started building.</p>
+<section class="cs-item">
+<h3>So many rows</h3>
+<figure class="cs-fig" style="max-width:1004px"><a href="/media/cs/crop-054.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-054.webp" alt="Idle and hover states." width="1339" height="781" loading="lazy" decoding="async"></a><figcaption>Idle and hover states.</figcaption></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-055.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-055.webp" alt="Location, record, project and account rows, with metadata, and the searchable field that matched the input." width="1600" height="729" loading="lazy" decoding="async"></a><figcaption>Location, record, project and account rows, with metadata, and the searchable field that matched the input.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Quick access to recently viewed items</h3>
+<figure class="cs-fig" style="max-width:1053px"><a href="/media/cs/crop-056.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-056.webp" alt="Icons when all types of objects are displayed, and relevance of input." width="1404" height="681" loading="lazy" decoding="async"></a><figcaption>Icons when all types of objects are displayed, and relevance of input.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Use filters to guide the system</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-057.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-057.webp" alt="The ability to drill down and find the exact type of object the user is looking for." width="1600" height="563" loading="lazy" decoding="async"></a><figcaption>The ability to drill down and find the exact type of object the user is looking for.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Where should the tabbing guides go?</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-058.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-058.webp" alt="Top, on hover, in the empty state, or at the bottom: a UX versus engineering discussion." width="1600" height="716" loading="lazy" decoding="async"></a><figcaption>Top, on hover, in the empty state, or at the bottom: a UX versus engineering discussion.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>The little things</h3>
+<figure class="cs-fig" style="max-width:987px"><a href="/media/cs/crop-059.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-059.webp" alt="States for when data is unavailable or not found, and multi-line searchable fields." width="1316" height="796" loading="lazy" decoding="async"></a><figcaption>States for when data is unavailable or not found, and multi-line searchable fields.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Metadata matrix</h3>
+<figure class="cs-fig" style="max-width:954px"><a href="/media/cs/crop-060.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-060.webp" alt="Metadata matrix" width="1272" height="805" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Get more context with a hover</h3>
+<figure class="cs-fig" style="max-width:1001px"><a href="/media/cs/crop-061.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-061.webp" alt="Get more context with a hover" width="1335" height="782" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Get the right context for each object</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-062.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-062.webp" alt="Records surface searchable fields and record status. Locations surface recently updated records. Accounts open in a new tab." width="1549" height="577" loading="lazy" decoding="async"></a><figcaption>Records surface searchable fields and record status. Locations surface recently updated records. Accounts open in a new tab.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Making sure it works for small devices</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-063.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-063.webp" alt="Horizontal scroll, and a preview panel on tapping the info icon." width="1502" height="668" loading="lazy" decoding="async"></a><figcaption>Horizontal scroll, and a preview panel on tapping the info icon.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Generally responsive</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-064.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-064.webp" alt="Generally responsive" width="1562" height="805" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>A little delight in the experience</h3>
+<figure class="cs-fig" style="max-width:958px"><a href="/media/cs/crop-065.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-065.webp" alt="Let’s add a little delight to the experience" width="1278" height="531" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Keyboard navigation</h3>
+<figure class="cs-fig" style="max-width:1074px"><a href="/media/cs/crop-066.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-066.webp" alt="Keyboard Nav" width="1432" height="584" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Finale</h3>
+<figure class="cs-fig" style="max-width:1063px"><a href="/media/cs/crop-067.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-067.webp" alt="Finale" width="1417" height="805" loading="lazy" decoding="async"></a></figure>
+</section>
+<h2>Validation</h2>
+<p class="beat">Did users find what we were searching for?</p>
+<section class="cs-item">
+<h3>Usability tests (6)</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-069.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-069.webp" alt="Usability Tests (6)" width="1600" height="671" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>More feature clicks</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-070.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-070.webp" alt="Legacy search, October 2023, and new search, October 2024." width="1589" height="323" loading="lazy" decoding="async"></a><figcaption>Legacy search, October 2023, and new search, October 2024.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Search to record</h3>
+<figure class="cs-fig" style="max-width:815px"><a href="/media/cs/crop-071.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-071.webp" alt="Legacy search and new search." width="1087" height="444" loading="lazy" decoding="async"></a><figcaption>Legacy search and new search.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Search to location</h3>
+<figure class="cs-fig" style="max-width:807px"><a href="/media/cs/crop-072.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-072.webp" alt="Legacy search and new search." width="1076" height="444" loading="lazy" decoding="async"></a><figcaption>Legacy search and new search.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Making users faster</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-073.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-073.webp" alt="Legacy search and new search." width="1598" height="488" loading="lazy" decoding="async"></a><figcaption>Legacy search and new search.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>In their hands</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-074.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-074.webp" alt="In their hands" width="1597" height="667" loading="lazy" decoding="async"></a></figure>
+</section>
 <h2>A shareable pattern</h2>
-<p>Search is one of many places across OpenGov where people look for records, so I documented the components in detail, with states, results and panels, so other teams can adopt the pattern. The metadata system I built here was later reused in <a href="/related-records" style="color: #9BA3FF">Related Records</a>.</p>
-<figure><img src="/media/gs-28-shareable-pattern.webp" alt="The search component set designed as a shareable pattern"></figure>
-
-<h2>What I’d do differently</h2>
-<p>I would define UX success measures before building. I had solid usage data after launch, but I could have set more detailed ways to judge success or failure up front, and agreed on them with the PM. Next time I would also instrument the key paths early so the before-and-after comparison is cleaner.</p>
-<p>What worked well: I communicated the voice of the user to the executive team and to engineering, and direct quotes from customers aligned people faster than any slide of mine could.</p>
+<section class="cs-item">
+<p>Search is one of many places across OpenGov where people look for records, so I documented the components in detail for other teams to adopt.</p>
+<figure class="cs-fig"><a href="/media/cs/crop-075.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-075.webp" alt="A shareable pattern" width="1600" height="368" loading="lazy" decoding="async"></a></figure>
+</section>
+<h2>Retro</h2>
+<section class="cs-item">
+<div class="cs-cols"><div><h4>Wins</h4><p>I was able to communicate research and the voice of the user successfully with the executive team and engineering. The designs and components were very detailed.</p></div><div><h4>What I’d change</h4><p>I could have come up with more detailed ways to measure UX success and failure.</p></div></div>
+</section>
 
 <nav aria-label="More case studies" style="display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #4A4B50">
-<a href="/inspections" style="text-decoration: none; flex: 1 1 16rem"><span style="display: block; color: #B4B6BF; font-size: 0.9rem">← Previous</span><span style="font-size: 1.4rem; font-weight: 700">Reshaping Inspections in Local Government</span></a>
-<a href="/related-records" style="text-decoration: none; flex: 1 1 16rem; text-align: right"><span style="display: block; color: #B4B6BF; font-size: 0.9rem">Next →</span><span style="font-size: 1.4rem; font-weight: 700">Related Records</span></a>
+<a href="/inspections" style="text-decoration: none; flex: 1 1 16rem"><span style="display: block; color: #FFFFFF; font-size: 0.9rem">← Previous</span><span style="font-size: 1.4rem; font-weight: 700">Reshaping Inspections in Local Government</span></a>
+<a href="/related-records" style="text-decoration: none; flex: 1 1 16rem; text-align: right"><span style="display: block; color: #FFFFFF; font-size: 0.9rem">Next →</span><span style="font-size: 1.4rem; font-weight: 700">Related Records</span></a>
 </nav>
 
 </article>

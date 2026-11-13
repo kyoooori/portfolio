@@ -8,7 +8,7 @@
 <link rel="icon" href="/media/logo-hand.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#FFFCF5}
 a{color:inherit}
@@ -22,54 +22,58 @@ a:focus-visible{outline:3px solid #3340F0;outline-offset:-3px}
 .card:hover{background:#FDCFF3}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #E2E3EA;border-left:1px solid #E2E3EA}
 .stat{padding:36px 40px 40px;border-right:1px solid #E2E3EA;display:flex;flex-direction:column;gap:.6rem}
-.stat b{font-family:'Inter Tight','Inter',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:clamp(2.6rem,4.2vw,3.75rem);line-height:1;letter-spacing:-.02em;color:#002FE5}
-.stat span{font-size:16px;line-height:1.45;color:#4A4D5A;max-width:24ch}
+.stat b{font-family:'Geist',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:clamp(2.6rem,4.2vw,3.75rem);line-height:1;letter-spacing:-.02em;color:#002FE5}
+.stat span{font-size:16px;line-height:1.45;color:#000000;max-width:24ch}
 @media(max-width:1000px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{border-bottom:1px solid #E2E3EA}}
 @media(max-width:520px){.stats{grid-template-columns:minmax(0,1fr)}}
-.facts{display:flex;flex-wrap:wrap;align-items:center;column-gap:clamp(2rem,5vw,4.5rem);row-gap:1rem;padding:36px 60px 40px;border-top:1px solid #E2E3EA;color:#4A4D5A}
+.facts{display:flex;flex-wrap:wrap;align-items:center;column-gap:clamp(2rem,5vw,4.5rem);row-gap:1rem;padding:36px 60px 40px;border-top:1px solid #E2E3EA;color:#000000}
 .fact{display:inline-flex;align-items:center;gap:12px}
 .fact svg{flex:none;color:#F7A8E4}
 .fact .dot{flex:none;width:8px;height:8px;border-radius:50%;background:#F7A8E4}
-.fact b{font-family:'Inter Tight','Inter',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:40px;line-height:1.1;letter-spacing:-.02em}
+.fact b{font-family:'Geist',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:40px;line-height:1.1;letter-spacing:-.02em}
 @media(max-width:600px){.facts{padding:28px 1.25rem 32px;flex-direction:column;align-items:flex-start}.fact b{font-size:30px}.fact svg{width:26px;height:26px}}
 .tags{display:flex;flex-wrap:wrap;gap:.5rem}
-.tags span{display:inline-block;padding:4px 12px;border-radius:99px;background:#FDCFF3;color:#15171F;font-size:14px;font-weight:400;line-height:1.5;transition:background-color .25s}
+.tags span{display:inline-block;padding:4px 12px;border-radius:99px;background:#FDCFF3;color:#000000;font-size:14px;font-weight:400;line-height:1.5;transition:background-color .25s}
 .card:hover .tags span{background:#FFFFFF}
-.result{margin:.6rem 0 0;padding:14px 18px;border-radius:10px;background:#FFFFFF;border:1px solid #E2E3EA;font-size:17px;line-height:1.45;font-weight:400;color:#15171F;max-width:44ch}
+.result{margin:.6rem 0 0;padding:14px 18px;border-radius:10px;background:#FFFFFF;border:1px solid #E2E3EA;font-size:17px;line-height:1.45;font-weight:400;color:#000000;max-width:44ch}
 .result b{font-weight:600;color:#3340F0}
 .mind{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid #E2E3EA}
 .mind-item{padding:36px 40px 40px;border-right:1px solid #E2E3EA;border-top:1px solid #E2E3EA;display:flex;flex-direction:column;gap:.75rem}
-.mind-item .img{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#F1EDE3;display:flex;align-items:center;justify-content:center;color:#8A8D99;font-size:14px;margin-bottom:.5rem}
+.mind-item .img{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#F1EDE3;display:flex;align-items:center;justify-content:center;color:#000000;font-size:14px;margin-bottom:.5rem}
 .mind-item .img img{width:100%;height:100%;object-fit:cover;display:block}
 .mind-item .img img.pin-tl{object-position:left top}
 .mind-item p a{color:#002FE5;text-decoration:underline;text-underline-offset:3px}
 .mind-item p a:hover{color:#3340F0}
-.mind-item .k{font-family:'My Hand',cursive;font-size:22px;line-height:1.2;color:#002FE5;letter-spacing:.5px}
-.mind-item h3{margin:0;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:28px;line-height:1.15;letter-spacing:-.015em;color:#15171F}
-.mind-item p{margin:0;font-size:16px;line-height:1.5;color:#4A4D5A;max-width:36ch}
+.mind-item .k{font-family:'Playfair Display',Georgia,serif;font-size:22px;line-height:1.2;color:#002FE5;letter-spacing:.5px}
+.mind-item h3{margin:0;font-family:'Geist',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:28px;line-height:1.15;letter-spacing:-.015em;color:#000000}
+.mind-item p{margin:0;font-size:16px;line-height:1.5;color:#000000;max-width:36ch}
 @media(max-width:900px){.mind{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:760px){.cards{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.card .shot img,.card .shot video{transition:none}}
+.card .shot.a-shot{position:relative}
+.card .shot.a-shot img{position:absolute;left:12%;top:14%;width:118%;height:auto;display:block;border-radius:10px 0 0 0;box-shadow:0 18px 50px rgba(0,0,0,.18);transition:transform .7s cubic-bezier(.2,.7,.2,1);transform-origin:0 0}
+.card:hover .shot.a-shot img{transform:none}
+@media(prefers-reduced-motion:reduce){.card .shot.a-shot img{transition:none}}
 
-.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Inter',system-ui,sans-serif;font-size:18px;font-weight:300;color:#F2F2F2}
+.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:300;color:#FFFFFF}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-.site-header .name{text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#F2F2F2}
+.site-header .name{text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#FFFFFF}
 .menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
 .menu-btn .trig{position:relative;display:block;width:87px;height:60px}
-.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#F2F2F2}
+.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#FFFFFF}
 .site-header.light .menu-btn .trig i{background:#37383F}
 .menu-btn .trig img{position:absolute;left:15.6px;top:5px;width:65px;height:41px;display:block}
 .site-menu{position:absolute;top:96px;right:clamp(1.25rem,5vw,4rem);width:280px;display:flex;flex-direction:column;padding:0;background:#2B2B2B;border:1px solid #55527E;border-radius:0;box-shadow:0 12px 32px rgba(0,0,0,.10)}
 .site-menu[hidden]{display:none}
-.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#F2F2F2;transition:background-color .2s}
+.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#FFFFFF;transition:background-color .2s}
 .site-menu a:last-child{border-bottom:0}
 .site-menu a::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:transparent}
 .site-menu a[aria-current="page"]::before{background:#F7A8E4}
-.site-menu a:hover{background:#FDCFF3;color:#15171F}
-.site-header.light{color:#15171F;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
-.site-header.light .name{color:#15171F}
+.site-menu a:hover{background:#FDCFF3;color:#000000}
+.site-header.light{color:#000000;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.site-header.light .name{color:#000000}
 .site-header.light .site-menu{background:#FFFCF5;border-color:#E2E3EA}
-.site-header.light .site-menu a{color:#15171F;border-color:#E2E3EA}
+.site-header.light .site-menu a{color:#000000;border-color:#E2E3EA}
 .site-header.light .site-menu a:hover{background:#FDCFF3}
 body{overflow-wrap:break-word}
 main{overflow-x:clip}
@@ -78,58 +82,58 @@ main{overflow-x:clip}
 </style>
 </head>
 <body>
-<div style="min-height: 100vh; background: #FFFCF5; color: #15171F; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
+<div style="min-height: 100vh; background: #FFFCF5; color: #000000; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; line-height: 1.6; font-weight: 300">
 <div style="position: relative; z-index: 20; background-color: #FFFFFF"><header class="site-header light"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:13px"></i><i style="top:21px"></i><i style="top:29px"></i><img src="/media/menu-hand.png" alt=""></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header></div>
 <main style="padding: 0 0 6rem; min-height: 3510px; padding-bottom: 0rem; min-height: 4126px">
 <div style="padding: 0 clamp(1.25rem, 5vw, 4rem); margin-top: 0px; margin-bottom: 0px; min-height: 590px">
 <h1 class="sr-only">Keyuri Tatu, product designer</h1>
-<div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0px"><div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; min-height: 493px"><p style="max-width: 75%; margin: 3.5rem 0 0; color: #002FE5; font-family: 'My Hand', cursive; font-size: 24px; line-height: 1.4; width: 75%; font-weight: 400; letter-spacing: 0.5px">Hi!<br></p><h1 style="margin: 0 0 2rem; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-style: normal; font-size: clamp(2.4rem, 5.2vw, 4.5rem); line-height: 1.05; letter-spacing: -0.025em; max-width: 75%; width: 1231px; margin-bottom: 2.25rem">I have 11 years of experience. Currently, I untangle complex systems for local and state governments and the residents who use them.</h1></div></div>
-<h2 id="work" style="margin: clamp(5rem, 10vw, 8.5rem) 0 0; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.025em; font-style: normal"><br></h2>
+<div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0px"><div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; min-height: 493px"><p style="max-width: 75%; margin: 3.5rem 0 0; color: #000000; font-family: 'Playfair Display', Georgia, serif; font-size: 24px; line-height: 1.4; width: 75%; font-weight: 400; letter-spacing: 0.5px"><br></p><h1 style="margin: 0 0 2rem; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-style: normal; font-size: clamp(2.4rem, 5.2vw, 4.5rem); line-height: 1.05; letter-spacing: -0.025em; max-width: 75%; width: 1231px; margin-bottom: 2.25rem">I have 11 years of experience. Currently, I untangle complex systems for local and state governments and the residents who use them.</h1></div></div>
+<h2 id="work" style="margin: clamp(5rem, 10vw, 8.5rem) 0 0; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.025em; font-style: normal"><br></h2>
 </div>
 
 
 
 <div class="facts" aria-label="Highlights">
-<span class="fact"><b style="font-size: 40px; color: rgb(21, 23, 31); font-weight: 600">Case Studies</b></span><span class="fact"></span>
+<span class="fact"><b style="font-size: 40px; color: #000000; font-weight: 600">Case Studies</b></span><span class="fact"></span>
 </div>
 
 <div class="cards" style="border-top: 1px solid #E2E3EA; border-left: 1px solid #E2E3EA">
 
 <a class="card" href="/public-portal" style="display: flex; flex-direction: column; text-decoration: none; border-right: 1px solid #E2E3EA; border-bottom: 1px solid #E2E3EA">
 <div style="padding: 40px; border-bottom: 1px solid #E2E3EA">
-<div class="shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #2B2B2B">
-<img src="/media/thumb-public-portal-window.webp" alt="Front Door, the public portal homepage, shown in a browser window: a blue-to-red gradient hero welcoming residents" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<div class="shot a-shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: linear-gradient(135deg, #14202C 0%, #3E2A3C 55%, #8A4049 100%)">
+<img src="/media/thumb-frontdoor-crop.webp" alt="Front Door, the public portal homepage, shown in a browser window: a blue-to-red gradient hero welcoming residents" style="left: 7%; width: 112%">
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Owning a Unified Public Portal and Site-Builder for Local Government</h3>
-<p style="margin: 0; font-family: 'Inter', system-ui, sans-serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #4A4D5A; max-width: 44ch">Building a single front door for residents to interact with their local government, along with a site-builder tool for the government to construct it.</p>
+<h3 style="margin: 0 0 1rem; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Owning a Unified Public Portal and Site-Builder for Local Government</h3>
+<p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #000000; max-width: 44ch">Building a single front door for residents to interact with their local government, along with a site-builder tool for the government to construct it.</p>
 <p class="tags" style="margin: auto 0 0; padding-top: 0.4rem"><span>2026</span><span>OpenGov</span></p>
 </div>
 </a>
 
 <a class="card" href="/inspections" style="display: flex; flex-direction: column; text-decoration: none; border-right: 1px solid #E2E3EA; border-bottom: 1px solid #E2E3EA">
 <div style="padding: 40px; border-bottom: 1px solid #E2E3EA">
-<div class="shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #2B2B2B">
-<img src="/media/thumb-inspections-window.webp" alt="The Capacity Planning screen in a browser window: slots filled, free slots and districts at capacity, with the Tenderloin district's inspectors" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<div class="shot a-shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #A9B8A6">
+<img src="/media/thumb-inspections-crop.webp" alt="The Capacity Planning screen in a browser window: slots filled, free slots and districts at capacity, with the Tenderloin district's inspectors" >
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Reshaping Inspections in Local Government</h3>
-<p style="margin: 0; font-family: 'Inter', system-ui, sans-serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #4A4D5A; max-width: 44ch">Simplifying interfaces for residents to book and manage inspections, and for the government to manage, conduct and track them. Recently designed for City &amp; County Of San Francisco.</p>
-<p class="tags" style="margin: auto 0 0; padding-top: 0.4rem"><span>2024–2026</span><span>OpenGov</span></p>
+<h3 style="margin: 0 0 1rem; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Reshaping Inspections in Local Government</h3>
+<p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #000000; max-width: 44ch">Simplifying interfaces for residents to book and manage inspections, and for the government to manage, conduct and track them.&nbsp;</p>
+<p class="result" style="width: 524px"><b>Recently designed for the City &amp; County Of San Francisco</b></p><p class="tags" style="margin: auto 0 0; padding-top: 0.4rem"><span>2024–2026</span><span>OpenGov</span></p>
 </div>
 </a>
 
 <a class="card" href="/global-search" style="display: flex; flex-direction: column; text-decoration: none; border-right: 1px solid #E2E3EA; border-bottom: 1px solid #E2E3EA">
 <div style="padding: 40px; border-bottom: 1px solid #E2E3EA">
-<div class="shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #2B2B2B">
-<img src="/media/thumb-global-search-window.webp" alt="Global search in a browser window: a search box with filters for records, locations, people and projects, above recently viewed items" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<div class="shot a-shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #A7B1C2">
+<img src="/media/thumb-search-crop.webp" alt="Global search in a browser window: a search box with filters for records, locations, people and projects, above recently viewed items" >
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Building A Reusable Global Search Pattern</h3>
-<p style="margin: 0; font-family: 'Inter', system-ui, sans-serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #4A4D5A; max-width: 44ch">Redesigning the most-used, most-complained-about feature in OpenGov’s permitting software. Faster paths to records and locations, shipped in three months.</p>
+<h3 style="margin: 0 0 1rem; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Building A Reusable Global Search Pattern</h3>
+<p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #000000; max-width: 44ch">Redesigning the most-used, most-complained-about feature in OpenGov’s permitting software. Faster paths to records and locations, shipped in three months.</p>
 <p class="result">Time from search to a location page: <b>1m 7s → 35s</b></p>
 <p class="tags" style="margin: auto 0 0; padding-top: 0.4rem"><span>2023–24</span><span>OpenGov</span></p>
 </div>
@@ -137,13 +141,13 @@ main{overflow-x:clip}
 
 <a class="card" href="/related-records" style="display: flex; flex-direction: column; text-decoration: none; border-right: 1px solid #E2E3EA; border-bottom: 1px solid #E2E3EA">
 <div style="padding: 40px; border-bottom: 1px solid #E2E3EA">
-<div class="shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #2B2B2B">
-<img src="/media/thumb-related-records-window.webp" alt="Related Records in a browser window: a tree of connected permits with filters for shared information, blocking and waiting records" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<div class="shot a-shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #C9A68E">
+<img src="/media/thumb-related-crop.webp" alt="Related Records in a browser window: a tree of connected permits with filters for shared information, blocking and waiting records" >
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Designing A Connection Between Government Records To Reflect Real-World Relationships</h3>
-<p style="margin: 0; font-family: 'Inter', system-ui, sans-serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #4A4D5A; max-width: 44ch">Connecting records that used to live in silos in OpenGov’s permitting software, so parent and child permits share information and wait on each other’s workflows.</p>
+<h3 style="margin: 0 0 1rem; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Designing A Connection Between Government Records To Reflect Real-World Relationships</h3>
+<p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #000000; max-width: 44ch">Connecting records that used to live in silos in OpenGov’s permitting software, so parent and child permits share information and wait on each other’s workflows.</p>
 <p class="result"><b>24 interviews, 10 communities</b>, and a live customer setup at a user group</p>
 <p class="tags" style="margin: auto 0 0; padding-top: 0.4rem"><span>2025</span><span>OpenGov</span></p>
 </div>
@@ -158,8 +162,8 @@ main{overflow-x:clip}
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Building And Facilitating The Design Thinking Program For Internal Stakeholders</h3>
-<p style="margin: 0; font-family: 'Inter', system-ui, sans-serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #4A4D5A; max-width: 44ch">Designing a workshop and a design thinking book in the context of the transportation industry to promote a user-centric approach to creating products at GE Transportation.</p>
+<h3 style="margin: 0 0 1rem; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Building And Facilitating The Design Thinking Program For Internal Stakeholders</h3>
+<p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #000000; max-width: 44ch">Designing a workshop and a design thinking book in the context of the transportation industry to promote a user-centric approach to creating products at GE Transportation.</p>
 <p class="tags" style="margin: auto 0 0; padding-top: 0.4rem"><span>2018–19</span><span>GE Transportation</span></p>
 </div>
 </a>
@@ -171,18 +175,18 @@ main{overflow-x:clip}
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
-<h3 style="margin: 0 0 1rem; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Crafting Visual Identity And Material For Primer Conference 2020</h3>
-<p style="margin: 0; font-family: 'Inter', system-ui, sans-serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #4A4D5A; max-width: 44ch">Creating a visual language and illustrations for Speculative Futures’ annual conference to capture the theme of ‘Activating Futures’.</p>
+<h3 style="margin: 0 0 1rem; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: -0.02em; font-style: normal">Crafting Visual Identity And Material For Primer Conference 2020</h3>
+<p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 300; font-size: 18px; line-height: 1.5; color: #000000; max-width: 44ch">Creating a visual language and illustrations for Speculative Futures’ annual conference to capture the theme of ‘Activating Futures’.</p>
 <p class="tags" style="margin: auto 0 0; padding-top: 0.4rem"><span>2019–20</span><span>Speculative Futures</span></p>
 </div>
 </a>
 
 </div><div class="facts" aria-label="Highlights">
-<span class="fact"><b style="font-size: 40px; color: #15171f; font-weight: 600">In Recent News.....</b></span><span class="fact"></span>
-</div><div class="mind" aria-label="Top of mind">
-<div class="mind-item" style="padding-left: 60px"><div class="img"><img src="/media/mind-3.jpg" alt="A filter coffee cheesecake with a white kolam pattern piped on top, next to plates of string hoppers" style="object-position: center 60%"></div><p>Most recently, I made this filter coffee cheesecake for South Indian themed party. The inspiration was 'kolam', a traditional pattern at the doorstep with rice paste.&nbsp;</p></div>
-<div class="mind-item"><div class="img"><img src="/media/mind-1.jpg" alt="Keyuri drilling into a wooden board in her garage workshop, with long pine planks laid out on the workbench" style="object-position: center 30%"></div><p>I made a coffee table from scratch, finally made my dad proud. Check it out <a href="/other-things#table-video">here</a>.</p></div>
-<div class="mind-item"><div class="img"><img src="/media/mind-2.jpg" alt="A handwriting sample page with a paragraph, numbers and the alphabet, written out to make a font" class="pin-tl" style="object-position: left top"></div><p>Recently used claude to turn my handwriting into a font. Would love feedback though. Download skill</p></div>
+<span class="fact"><b style="font-size: 40px; color: #000000; font-weight: 600">In Recent News.....</b></span><span class="fact"></span>
+</div><div class="mind" aria-label="Top of mind" style="background-color: #393939">
+<div class="mind-item" style="padding-left: 60px"><div class="img"><img src="/media/mind-3.jpg" alt="A filter coffee cheesecake with a white kolam pattern piped on top, next to plates of string hoppers" style="object-position: center 60%"></div><p style="color: #ffffff">Most recently, I made this filter coffee cheesecake for South Indian themed party. The inspiration was 'kolam', a traditional pattern at the doorstep with rice paste.&nbsp;</p></div>
+<div class="mind-item"><div class="img"><img src="/media/mind-1.jpg" alt="Keyuri drilling into a wooden board in her garage workshop, with long pine planks laid out on the workbench" style="object-position: center 30%"></div><p style="color: #ffffff">I made a coffee table from scratch, finally made my dad proud. Check it out <a href="/other-things#table-video">here</a>.</p></div>
+<div class="mind-item"><div class="img"><img src="/media/mind-font.webp" alt="The Claude logo over a sentence typed in Keyuri's handwriting font in blue, above a photo of her handwritten sample page" class="pin-tl" style="object-position: left top"></div><p style="color: #ffffff">Recently used claude to turn my handwriting into a font. Would love feedback though. Download skill</p></div>
 </div>
 </main>
 </div>

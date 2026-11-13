@@ -8,14 +8,14 @@
 <link rel="icon" href="/media/logo-hand.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#2B2B2B}
 a{color:inherit}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 a:focus-visible,button:focus-visible{outline:3px solid #9BA3FF;outline-offset:3px}
 article p{margin:0 0 1.1rem}
-.ph{border:2px dashed #4A4B50;display:flex;align-items:center;justify-content:center;color:#B4B6BF;text-align:center;padding:1rem}
+.ph{border:2px dashed #4A4B50;display:flex;align-items:center;justify-content:center;color:#FFFFFF;text-align:center;padding:1rem}
 @media(max-width:760px){.about-grid,.facts{grid-template-columns:1fr!important}}
 .things{display:grid;gap:0}
 .thing{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(1.25rem,3vw,2.5rem);padding:2rem 0;border-top:1px solid #4A4B50}
@@ -24,25 +24,25 @@ article p{margin:0 0 1.1rem}
 .photos img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:8px}
 @media(max-width:760px){.thing{grid-template-columns:1fr}.photos{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Inter',system-ui,sans-serif;font-size:18px;font-weight:300;color:#F2F2F2}
+.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:300;color:#FFFFFF}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-.site-header .name{text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#F2F2F2}
+.site-header .name{text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#FFFFFF}
 .menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
 .menu-btn .trig{position:relative;display:block;width:87px;height:60px}
-.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#F2F2F2}
+.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#FFFFFF}
 .site-header.light .menu-btn .trig i{background:#37383F}
 .menu-btn .trig img{position:absolute;left:15.6px;top:5px;width:65px;height:41px;display:block}
 .site-menu{position:absolute;top:96px;right:clamp(1.25rem,5vw,4rem);width:280px;display:flex;flex-direction:column;padding:0;background:#2B2B2B;border:1px solid #55527E;border-radius:0;box-shadow:0 12px 32px rgba(0,0,0,.10)}
 .site-menu[hidden]{display:none}
-.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#F2F2F2;transition:background-color .2s}
+.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#FFFFFF;transition:background-color .2s}
 .site-menu a:last-child{border-bottom:0}
 .site-menu a::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:transparent}
 .site-menu a[aria-current="page"]::before{background:#F7A8E4}
-.site-menu a:hover{background:#FDCFF3;color:#15171F}
-.site-header.light{color:#15171F;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
-.site-header.light .name{color:#15171F}
+.site-menu a:hover{background:#FDCFF3;color:#000000}
+.site-header.light{color:#000000;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.site-header.light .name{color:#000000}
 .site-header.light .site-menu{background:#FFFCF5;border-color:#E2E3EA}
-.site-header.light .site-menu a{color:#15171F;border-color:#E2E3EA}
+.site-header.light .site-menu a{color:#000000;border-color:#E2E3EA}
 .site-header.light .site-menu a:hover{background:#FDCFF3}
 body{overflow-wrap:break-word}
 main{overflow-x:clip}
@@ -51,7 +51,7 @@ main{overflow-x:clip}
 </style>
 </head>
 <body>
-<div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
+<div style="min-height: 100vh; background: #2B2B2B; color: #FFFFFF; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; line-height: 1.6; font-weight: 300">
 <header class="site-header"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:13px"></i><i style="top:21px"></i><i style="top:29px"></i><img src="/media/menu-hand.png" alt=""></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/">Case Studies</a><a href="/about" aria-current="page">About Me</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
 <main style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem">
 <article style="max-width: 68rem; margin-top: 3rem">
@@ -65,7 +65,7 @@ main{overflow-x:clip}
 
 
 
-<p style="max-width: 44rem; margin: 0; color: #F2F2F2; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300; width: 495px">I design end-to-end experiences rooted in human connection, most recently civic tools used by local and state governments and the residents they serve. I believe a process is a template, not a rule, and I lead with questions. Ideas are at the center of my practice: nothing beats finding a strong concept at the core of a complex experience. I’ve recently taken on a much broader product role and loving the stretch.</p></div>
+<p style="max-width: 44rem; margin: 0; color: #FFFFFF; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; line-height: 1.6; font-weight: 300; width: 495px">I design end-to-end experiences rooted in human connection, most recently civic tools used by local and state governments and the residents they serve. I believe a process is a template, not a rule, and I lead with questions. Ideas are at the center of my practice: nothing beats finding a strong concept at the core of a complex experience. I’ve recently taken on a much broader product role and loving the stretch.</p></div>
 <img src="/media/headshot.webp" alt="Keyuri smiling at her cat by a sunny window, holding a carton of Frooti mango drink" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; border-radius: 12px">
 </div>
 
@@ -76,12 +76,12 @@ main{overflow-x:clip}
 
 </div>
 
-<h2 style="margin: 4.5rem 0 1.25rem; font-size: 2rem; letter-spacing: -0.015em; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-style: normal">A little more about me</h2>
+<h2 style="margin: 4.5rem 0 1.25rem; font-size: 2rem; letter-spacing: -0.015em; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-style: normal">A little more about me</h2>
 <div class="things">
 <div class="thing">
 <div>
 <b style="display: block; font-size: 1.25rem; margin: 0 0 0.4rem">I like making things!</b>
-<span style="color: #B4B6BF">Cakes, furniture, painting, anything really - it depends on the idea. I change my space up every few months. I have aced the FB marketplace + Uber courier game to collect unique items :)</span>
+<span style="color: #FFFFFF">Cakes, furniture, painting, anything really - it depends on the idea. I change my space up every few months. I have aced the FB marketplace + Uber courier game to collect unique items :)</span>
 </div>
 <div class="photos">
 <img src="/media/about-making-cake.webp" alt="A homemade chocolate cake piped with a white kolam pattern">
@@ -92,7 +92,7 @@ main{overflow-x:clip}
 <div class="thing">
 <div>
 <b style="display: block; font-size: 1.25rem; margin: 0 0 0.4rem">I have two cats :)</b>
-<span style="color: #B4B6BF">Mau - she's sassy and thinks she owns the house - and Coco - she's a flower child.</span>
+<span style="color: #FFFFFF">Mau - she's sassy and thinks she owns the house - and Coco - she's a flower child.</span>
 </div>
 <div class="photos">
 <img src="/media/about-cats-1.webp" alt="Two tabby cats curled up together into one round ball on a pink quilt">
@@ -103,7 +103,7 @@ main{overflow-x:clip}
 <div class="thing">
 <div>
 <b style="display: block; font-size: 1.25rem; margin: 0 0 0.4rem">She's a singer!</b>
-<span style="color: #B4B6BF">I have been singing pretty much since I was a little girl. I'm part of a small sourh asian band in the Bay Area.&nbsp;</span>
+<span style="color: #FFFFFF">I have been singing pretty much since I was a little girl. I'm part of a small sourh asian band in the Bay Area.&nbsp;</span>
 </div>
 <div class="photos">
 <img src="/media/about-singing-stage.webp" alt="Keyuri singing on stage under purple and green lights, beside a guitarist">
@@ -113,7 +113,7 @@ main{overflow-x:clip}
 <div class="thing">
 <div>
 <b style="display: block; font-size: 1.25rem; margin: 0 0 0.4rem">I volunteer.</b>
-<span style="color: #B4B6BF">I enjoy spending time in the community to create a positive impact in whatver small way I can.</span>
+<span style="color: #FFFFFF">I enjoy spending time in the community to create a positive impact in whatver small way I can.</span>
 </div>
 <div class="photos">
 <img src="/media/about-volunteer-group.webp" alt="A group of older women in matching pink outfits, smiling backstage">
@@ -126,22 +126,22 @@ main{overflow-x:clip}
 
 <div class="facts" style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); margin-top: 4.5rem">
 <div>
-<h2 style="margin: 0 0 1rem; font-size: 2rem; letter-spacing: -0.015em; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-style: normal">Where I’ve been</h2>
+<h2 style="margin: 0 0 1rem; font-size: 2rem; letter-spacing: -0.015em; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-style: normal">Where I’ve been</h2>
 <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem">
-<li style="display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #4A4B50"><span>OpenGov</span><span style="color: #B4B6BF">2022–now</span></li>
+<li style="display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #4A4B50"><span>OpenGov</span><span style="color: #FFFFFF">2022–now</span></li>
 
-<li style="display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #4A4B50"><span>GE Innovation Lab, GE Transportation</span><span style="color: rgb(180, 182, 191)">2019 - 2022</span></li>
-<li style="display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #4A4B50"><span>The Republic</span><span style="color: rgb(180, 182, 191)">2016-2018</span></li>
-<li style="display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #4A4B50"><span>Elephant Design + Strategy</span><span style="color: rgb(180, 182, 191)">2017-2018</span></li>
+<li style="display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #4A4B50"><span>GE Innovation Lab, GE Transportation</span><span style="color: #FFFFFF">2019 - 2022</span></li>
+<li style="display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #4A4B50"><span>The Republic</span><span style="color: #FFFFFF">2016-2018</span></li>
+<li style="display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #4A4B50"><span>Elephant Design + Strategy</span><span style="color: #FFFFFF">2017-2018</span></li>
 </ul>
 </div>
 <div>
-<h2 style="margin: 0 0 1rem; font-size: 2rem; letter-spacing: -0.015em; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; font-style: normal">Say hi</h2>
+<h2 style="margin: 0 0 1rem; font-size: 2rem; letter-spacing: -0.015em; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-style: normal">Say hi</h2>
 <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem">
 <li><a href="https://www.linkedin.com/in/keyuri-tatu" style="color: #9BA3FF">LinkedIn</a></li>
 <li><a href="https://www.instagram.com/thisisatatu/" style="color: #9BA3FF">Instagram</a></li>
 <li><a href="/resume" style="color: #9BA3FF">Resume</a></li>
-<li style="color: #B4B6BF">keyuritatu@gmail.com<br>404-884-0737</li>
+<li style="color: #FFFFFF">keyuritatu@gmail.com<br>404-884-0737</li>
 </ul>
 </div>
 </div>

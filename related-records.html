@@ -8,7 +8,7 @@
 <link rel="icon" href="/media/logo-hand.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#2B2B2B}
 a{color:inherit}
@@ -16,41 +16,65 @@ a{color:inherit}
 a:focus-visible{outline:3px solid #9BA3FF;outline-offset:3px}
 article p{margin:0 0 1.1rem}
 article>p,article>h2,article>h3,article>ul,article>blockquote,article>.lede{max-width:44rem}
-article h2{margin:3.5rem 0 1rem;font-size:2rem;letter-spacing:-.015em;line-height:1.15;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-weight:500;font-style:normal}
-article h3{margin:2.5rem 0 .6rem;font-size:1.5rem;line-height:1.2;letter-spacing:-.01em;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-weight:500;font-style:normal}
+article h2{margin:3.5rem 0 1rem;font-size:2rem;letter-spacing:-.015em;line-height:1.15;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-style:normal}
+article h3{margin:2.5rem 0 .6rem;font-size:1.5rem;line-height:1.2;letter-spacing:-.01em;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-style:normal}
 article>ul{padding-left:1.2rem;margin:0 0 1.5rem}article>ul li{margin-bottom:.5rem}
 figure{margin:2.5rem 0}figure img{width:100%;height:auto;display:block;background:transparent}
-figcaption{margin-top:.6rem;color:#B4B6BF;font-size:.9rem}
+figcaption{margin-top:.6rem;color:#FFFFFF;font-size:.9rem}
 .grid{display:grid;gap:1.25rem;margin:2.5rem 0}.grid figure{margin:0}
 .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1.5rem;margin:2.5rem 0;padding:1.5rem 0;border-top:1px solid #4A4B50;border-bottom:1px solid #4A4B50}
-.meta dt{color:#B4B6BF;font-size:.9rem;margin-bottom:.3rem}.meta dd{margin:0}
+.meta dt{color:#FFFFFF;font-size:.9rem;margin-bottom:.3rem}.meta dd{margin:0}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.5rem;margin:0 0 2.5rem}
 .stats b{display:block;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;letter-spacing:-.03em;color:#9BA3FF}
-.stats span{display:block;margin-top:.5rem;color:#B4B6BF;font-size:.95rem}
+.stats span{display:block;margin-top:.5rem;color:#FFFFFF;font-size:.95rem}
 blockquote{margin:2rem 0;padding:0 0 0 1.25rem;border-left:3px solid #9BA3FF;font-size:1.25rem;line-height:1.45}
-blockquote cite{display:block;margin-top:.6rem;font-size:.9rem;font-style:normal;color:#B4B6BF}
+blockquote cite{display:block;margin-top:.6rem;font-size:.9rem;font-style:normal;color:#FFFFFF}
 @media(max-width:600px){.g2{grid-template-columns:1fr}}
+article>h2{max-width:none!important}
+article h2{margin:9rem 0 3.5rem;padding-top:2.5rem;border-top:1px solid #4A4B50;font-size:2.25rem}
+article h2::before{content:"";display:block;width:8px;height:8px;border-radius:50%;background:#F7A8E4;margin-bottom:1.25rem}
+.beat{max-width:22ch!important;margin:6.5rem 0 4.5rem;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-size:clamp(2rem,3.8vw,3.25rem);line-height:1.08;letter-spacing:-.025em}
+h2+.beat{margin-top:0}
+.cs-item{margin:0 0 7rem}
+.cs-item+.cs-item.cs-cont{margin-top:-4.5rem}
+.cs-item>h3{margin:0 0 1.1rem;max-width:30ch;font-size:1.75rem;line-height:1.2}
+.cs-item>p{max-width:40rem;line-height:1.7;margin-bottom:1rem}
+.cs-fig{margin:2.75rem 0 0}
+.cs-fig a{display:block}
+.cs-fig img{border-radius:12px;width:100%;height:auto}
+.cs-fig figcaption,.cs-cap{margin-top:1rem;color:#FFFFFF;font-size:.95rem;line-height:1.55;max-width:40rem}
+.cs-grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem 2rem;margin-top:2.75rem}.cs-grid2 .cs-fig{margin:0}
+.cs-stats{margin:2.25rem 0 0!important;gap:2rem!important}
+.cs-chips{list-style:none;padding:0;margin:1.75rem 0 0;display:flex;flex-wrap:wrap;gap:.75rem}
+.cs-chips li{padding:8px 18px;border-radius:99px;background:#FDCFF3;color:#000000;font-size:1rem}
+.cs-ol{max-width:40rem;padding-left:1.4rem;margin:1.5rem 0 0;line-height:1.7}.cs-ol li{margin-bottom:.75rem}
+.cs-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:2.75rem 2.5rem;margin:2.25rem 0 0}
+.cs-cols>div{border-top:1px solid #4A4B50;padding-top:1.25rem}
+.cs-cols h4{margin:0 0 .75rem;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-size:1.25rem;line-height:1.25;letter-spacing:-.01em}
+.cs-cols p{margin:0;font-size:1rem;line-height:1.65}
+.cs-item blockquote{max-width:40rem;margin:2.25rem 0}
+@media(max-width:600px){.cs-grid2{grid-template-columns:1fr}.beat{margin:4.5rem 0 3rem}article h2{margin-top:6rem}.cs-item{margin-bottom:5rem}.cs-item+.cs-item.cs-cont{margin-top:-3rem}}
 
-.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Inter',system-ui,sans-serif;font-size:18px;font-weight:300;color:#F2F2F2}
+.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:300;color:#FFFFFF}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-.site-header .name{text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#F2F2F2}
+.site-header .name{text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#FFFFFF}
 .menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
 .menu-btn .trig{position:relative;display:block;width:87px;height:60px}
-.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#F2F2F2}
+.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#FFFFFF}
 .site-header.light .menu-btn .trig i{background:#37383F}
 .menu-btn .trig img{position:absolute;left:15.6px;top:5px;width:65px;height:41px;display:block}
 .site-menu{position:absolute;top:96px;right:clamp(1.25rem,5vw,4rem);width:280px;display:flex;flex-direction:column;padding:0;background:#2B2B2B;border:1px solid #55527E;border-radius:0;box-shadow:0 12px 32px rgba(0,0,0,.10)}
 .site-menu[hidden]{display:none}
-.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#F2F2F2;transition:background-color .2s}
+.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#FFFFFF;transition:background-color .2s}
 .site-menu a:last-child{border-bottom:0}
 .site-menu a::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:transparent}
 .site-menu a[aria-current="page"]::before{background:#F7A8E4}
-.site-menu a:hover{background:#FDCFF3;color:#15171F}
-.site-header.light{color:#15171F;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
-.site-header.light .name{color:#15171F}
+.site-menu a:hover{background:#FDCFF3;color:#000000}
+.site-header.light{color:#000000;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.site-header.light .name{color:#000000}
 .site-header.light .site-menu{background:#FFFCF5;border-color:#E2E3EA}
-.site-header.light .site-menu a{color:#15171F;border-color:#E2E3EA}
+.site-header.light .site-menu a{color:#000000;border-color:#E2E3EA}
 .site-header.light .site-menu a:hover{background:#FDCFF3}
 body{overflow-wrap:break-word}
 main{overflow-x:clip}
@@ -59,17 +83,17 @@ main{overflow-x:clip}
 </style>
 </head>
 <body>
-<div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
-<div class="hero" style="background: #FFFCF5; color: #15171F">
+<div style="min-height: 100vh; background: #2B2B2B; color: #FFFFFF; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; line-height: 1.6; font-weight: 300">
+<div class="hero" style="background: #FFFCF5; color: #000000">
 <header class="site-header light"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:13px"></i><i style="top:21px"></i><i style="top:29px"></i><img src="/media/menu-hand.png" alt=""></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
 <div style="padding: 3rem clamp(1.25rem, 5vw, 4rem) 3.5rem">
 <div style="max-width: 68rem">
-<span style="color: #000000; font-weight: 600">[Year]</span>
+<span style="color: #000000; font-weight: 600">2025</span>
 <div class="title-wrap" style="display: table">
-<h1 style="font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-family: 'Inter Tight', 'Inter', system-ui, sans-serif; font-weight: 500; max-width: 22ch; margin: 0.5rem 0 0; font-style: normal; width: 1110px">Designing A Connection Between Government Records To Reflect Real-World Relationships</h1>
+<h1 style="font-size: clamp(2.2rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; max-width: 22ch; margin: 0.5rem 0 0; font-style: normal; width: 1110px">Designing A Connection Between Government Records To Reflect Real-World Relationships</h1>
 <div aria-hidden="true" style="height: 2px; background: #FDCFF3; margin: 1.75rem 0"></div>
 </div>
-<p class="lede" style="margin: 0; max-width: 44rem; color: #002FE5; font-family: 'My Hand', cursive; font-size: 1.8rem; line-height: 1.3">A net-new way for permitting staff to connect records that used to live in silos, so a building permit knows about the electrical, plumbing and inspection work that depends on it.</p>
+<p class="lede" style="margin: 0; max-width: 44rem; color: #000000; font-family: 'Playfair Display', Georgia, serif; font-size: 1.8rem; line-height: 1.3">A net-new way for permitting staff to connect records that used to live in silos, so a building permit knows about the electrical, plumbing and inspection work that depends on it.</p>
 </div>
 </div>
 </div>
@@ -97,117 +121,314 @@ main{overflow-x:clip}
 <p>In OpenGov’s Permitting &amp; Licensing product, everything is a record: a permit, a license, a code complaint. But the records did not talk to each other. A building permit had no idea that an electrical permit was waiting on it, or that a Certificate of Occupancy could not be issued until both were done.</p>
 <p>Customers had asked for this through every channel we had: Productboard, our ideas portal, sales calls and professional services meetings. Competitors already offered it. It had sat on the roadmap for a while and kept slipping, but as OpenGov moved up-market, connected records became table stakes. I was the designer on it from discovery through launch.</p>
 
-<h2>What we already knew</h2>
-<p>Before talking to users, I started with what the company knew. I interviewed customer-facing staff across customer success, professional services, implementation and solutions engineering, read through ideas portal comments, and listened to past sales calls. Four themes came up:</p>
-<ul>
-<li>We struggled with larger communities that use PLC across several departments.</li>
-<li>Customers wanted trees of records, with hierarchy and sequencing.</li>
-<li>Users were inventing clever workarounds to connect records.</li>
-<li>Required records were being sorted out over phone calls, which took time.</li>
-</ul>
-
+<h2>Why this project</h2>
+<section class="cs-item">
+<h3>Users and customers wanted it.</h3>
+<p>Customers had been requesting this feature through multiple channels like Productboard, the Aha ideas portal, sales calls and professional services meetings.</p>
+<figure class="cs-fig" style="max-width:915px"><a href="/media/cs/crop-079.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-079.webp" alt="Users/Customers wanted it. Customers had been requesting this feature through multiple channels like" width="1220" height="680" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Competitors had it.</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-080.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-080.webp" alt="Competitors had it." width="1600" height="558" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>The company saw a gap.</h3>
+<p>This feature had been on our roadmap for a while, but kept falling off for different reasons. As OpenGov began moving up-market, having records share information became table stakes.</p>
+</section>
+<p class="beat">At a high level, the records in our software did not talk to each other.</p>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-085.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-085.webp" alt="Slide" width="1600" height="929" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig" style="max-width:1036px"><a href="/media/cs/crop-086.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-086.webp" alt="Slide" width="1382" height="931" loading="lazy" decoding="async"></a></figure>
+</section>
+<h2>Process</h2>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-087.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-087.webp" alt="Start with what we know, quick and dirty mocks, user journeys, data to insights, break down and plan, meet in Boston, a Figma dive, sharpen, then validate and test." width="1600" height="626" loading="lazy" decoding="async"></a><figcaption>Start with what we know, quick and dirty mocks, user journeys, data to insights, break down and plan, meet in Boston, a Figma dive, sharpen, then validate and test.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Research plan</h3>
+<div class="cs-cols"><div><h4>Learn from what we know</h4><p>1. Customer-facing staff interviews (CS, PS, IA, SE)<br>2. Ideas portal comments<br>3. Past sales call recordings</p></div><div><h4>Talk to users</h4><p>User interviews</p></div><div><h4>Validate with users</h4><p>1. User interviews<br>2. Usability tests</p></div></div>
+</section>
+<section class="cs-item">
+<h3>What we knew</h3>
+<div class="cs-cols"><div><p>We fail with larger communities that use PLC across departments.</p></div><div><p>Customers want trees of records, with hierarchy and sequencing.</p></div><div><p>Users are coming up with intelligent workarounds to connect records.</p></div><div><p>Required records are discussed over phone calls, making it time consuming.</p></div></div>
+</section>
 <h2>Research</h2>
-<p>I ran 24 interviews over three rounds with staff from 10 communities. Participants came from two places: recommendations from professional services, customer success and project managers, and volunteers from PLC’s quarterly customer webinar. I wrote the interview script by listing the gaps in what we knew, and I asked people to share their screens and show me how they handled connected work today.</p>
-<p>I synthesized everything in Miro: tagged notes, a summary for every interview, and maps of how each community’s records related to one another.</p>
-<figure><img src="/media/rr-096.webp" alt="Miro boards from synthesis: clusters of tagged notes and a sketch of a parent record linked to child records through inspections, fees, renewal and approval"><figcaption>Synthesis in Miro, including an early sketch of how a parent record connects to its children.</figcaption></figure>
-
-<h3>Use cases</h3>
-<ul>
-<li><strong>Special events:</strong> a music festival needs several permits and licenses handled together.</li>
-<li><strong>Construction projects:</strong> a primary building permit is the parent, and electrical, plumbing and mechanical permits are its children.</li>
-<li><strong>Retail and business:</strong> permits at the mall, building and unit level need to be tracked and related.</li>
-<li><strong>Existing systems:</strong> inspections and permits become tasks in an asset management system, to trigger work like snow removal.</li>
-<li><strong>Fees and payment:</strong> fees across several permits combine into one payment.</li>
-</ul>
-
-<h2>Problem</h2>
-<p>Interviews showed exactly where the current system broke down.</p>
-<h3>Projects did not work</h3>
-<p>PLC already had a Projects feature, but users saw it as little more than a label.</p>
+<p class="beat">Let’s talk to users.</p>
+<section class="cs-item">
+<h3>User interviews</h3>
+<div class="stats cs-stats"><div><b>24</b><span>Interviews</span></div><div><b>3</b><span>Rounds</span></div><div><b>58</b><span>Min. average length</span></div><div><b>10</b><span>Communities</span></div></div>
+<figure class="cs-fig" style="max-width:960px"><a href="/media/cs/crop-091.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-091.webp" alt="User Interviews 24 3" width="1280" height="680" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Finding participants</h3>
+<ol class="cs-ol"><li><b>Research participant recommendations</b> from Professional Services, Customer Success and Project Managers.</li><li><b>Research volunteers.</b> PLC hosts a quarterly webinar where we ask participants if they would like to be part of research initiatives.</li></ol>
+</section>
+<section class="cs-item">
+<h3>Interview script</h3>
+<p>I started with the gaps in my knowledge about the users’ needs and made a list of everything I wanted to learn in our discovery phase.</p>
+<figure class="cs-fig" style="max-width:915px"><a href="/media/cs/crop-094.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-094.webp" alt="Interview Script I started with the gaps in my knowledge about the users’ needs and made a list of everything" width="1220" height="680" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>A lot of Miro</h3>
+<figure class="cs-fig" style="max-width:960px"><a href="/media/cs/crop-095.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-095.webp" alt="A lot of Miro endless and every step leads to a new possibilities are endless and every step leads" width="1280" height="680" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-096.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-096.webp" alt="Slide" width="1589" height="944" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-097.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-097.webp" alt="Slide" width="1597" height="942" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Show me what you see</h3>
+<figure class="cs-fig" style="max-width:902px"><a href="/media/cs/crop-098.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-098.webp" alt="Show me what you see endless and every step leads to a new possibilities are endless and every step leads" width="1202" height="675" loading="lazy" decoding="async"></a></figure>
+</section>
+<h2>Synthesis</h2>
+<section class="cs-item">
+<h3>Tagged data, a lot.</h3>
+<figure class="cs-fig" style="max-width:902px"><a href="/media/cs/crop-099.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-099.webp" alt="Tagged data, a lot. endless and every step leads to a new possibilities are endless and every step leads" width="1202" height="667" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-100.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-100.webp" alt="Slide" width="1597" height="806" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Summarized and documented</h3>
+<figure class="cs-fig" style="max-width:904px"><a href="/media/cs/crop-101.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-101.webp" alt="Summarized &amp; documented endless and every step leads to a new possibilities are endless and every step leads" width="1205" height="667" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig" style="max-width:904px"><a href="/media/cs/crop-102.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-102.webp" alt="Summarized &amp; documented endless and every step leads to a new possibilities are endless and every step leads" width="1206" height="667" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>We identified our use cases</h3>
+<div class="cs-cols"><div><h4>Special events permits</h4><p>Handling complex processes involving multiple permits and licenses for special events, such as music festivals, to streamline the process and improve user experience.</p></div><div><h4>Construction projects</h4><p>The primary building permit acts as the parent, and other permits like electrical, plumbing and mechanical are child permits.</p></div><div><h4>Retail and business</h4><p>Permits at different levels (mall level, building level, unit level) need to be tracked and related.</p></div><div><h4>Integration with existing systems</h4><p>Setting up inspections and permits as tasks in an Enterprise Asset Management (EAM) system to trigger actions like snow removal.</p></div><div><h4>Fee management and payment</h4><p>Combining fees across multiple permits to allow a single payment process, enhancing the user experience.</p></div></div>
+</section>
+<section class="cs-item">
+<h3>And user goals</h3>
+<ul class="cs-chips"><li>Record requirement</li><li>Permit hierarchy</li><li>Bulk permit and license tracking</li><li>Task dependencies</li><li>Payment aggregation</li></ul>
+</section>
+<h2>Problem space</h2>
+<p class="beat">What is wrong with the system today?</p>
+<section class="cs-item">
+<h3>PLC Projects did not work</h3>
+<blockquote>“A project to me is nothing more than a parent.”<cite>Customer interview</cite></blockquote>
 <blockquote>“Projects is just a tag at the top. It’s not worth the fact that you still need to go in and tag everything.”<cite>Customer interview</cite></blockquote>
-<h3>Workflows were siloed</h3>
-<p>A parent record often has to wait on its children, but nothing in the product connected their workflows. Checking a related record’s status took six clicks.</p>
+<figure class="cs-fig" style="max-width:915px"><a href="/media/cs/crop-106.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-106.webp" alt="PLC Projects did not work “A project to me is nothing more than a parent”" width="1220" height="620" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Siloed workflows</h3>
+<blockquote>“Parent records need to wait for the children permits to be approved.”<cite>Customer interview</cite></blockquote>
+<blockquote>“I want to see a parent’s workflow step change based on a child or sibling’s workflow.”<cite>Customer interview</cite></blockquote>
 <blockquote>“We only issue the C of O (Certificate of Occupancy) after other permits on the property have been issued.”<cite>Customer interview</cite></blockquote>
-<figure><img src="/media/rr-107.webp" alt="Siloed workflows: three customer quotes beside two record workflows, with six clicks needed to move between them"><figcaption>Moving between dependent workflows took six clicks.</figcaption></figure>
-<h3>Dependencies lived on sticky notes</h3>
-<p>The only way to find related records was the Location tab, which only showed records at the same exact address. Everything else was tracked by hand, sometimes on sticky notes on a monitor.</p>
+<figure class="cs-fig" style="max-width:652px"><a href="/media/cs/crop-107.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-107.webp" alt="Moving between two dependent workflows took 6 clicks." width="870" height="590" loading="lazy" decoding="async"></a><figcaption>Moving between two dependent workflows took 6 clicks.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Finding dependent workflows</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-108.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-108.webp" alt="Location tab, Associated Records, Record page. But this limits us to only records at the same exact address." width="1600" height="548" loading="lazy" decoding="async"></a><figcaption>Location tab, Associated Records, Record page. But this limits us to only records at the same exact address.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Manually tracking dependencies</h3>
+<p>Sticky notes.</p>
 <blockquote>“We need more conditions beyond yes/no to determine what permits will be required.”<cite>Customer interview</cite></blockquote>
-
-<h2>Framing the problem</h2>
-<p>The problem was big enough to cause some thought paralysis. To break it down, I split users into four groups by what they were trying to do: the Quick-Linkers, the Organizers, the Builders and the Designers. Then I listed concrete tasks for each group and mapped them as user journeys, which led to the core question: how should records talk to each other?</p>
-<div class="grid g2">
-<figure><img src="/media/rr-112.webp" alt="Four user groups: The Quick-Linkers, The Organizers, The Builders and The Designers, each with goals, tasks and expectations"><figcaption>Four user groups, from simple linking to designing full processes.</figcaption></figure>
-<figure><img src="/media/rr-114.webp" alt="User journeys: a persona starting a planning project, moving through parent and child records and their workflows"><figcaption>User journeys across parent and child records.</figcaption></figure>
-</div>
-
-<h2>Planning in buckets</h2>
-<p>After quick, rough explorations, I paused to plan scope with the team. We split the work into four buckets and started with the first:</p>
-<ul>
-<li>Ad-hoc linked records</li>
-<li>Automated linked records</li>
-<li>Form mapping</li>
-<li>Enhanced projects</li>
-</ul>
-<p>Within that, I broke the design into micro-journeys: displaying related records, creating a relationship, relationship templates and projects.</p>
-
+<figure class="cs-fig" style="max-width:690px"><a href="/media/cs/crop-109.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-109.webp" alt="Only once this step is complete." width="920" height="590" loading="lazy" decoding="async"></a><figcaption>Only once this step is complete.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Inconsistent data across records</h3>
+<figure class="cs-fig" style="max-width:820px"><a href="/media/cs/crop-110.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-110.webp" alt="Inconsistent data across records endless and every step leads to a new possibilities are endless and every ste" width="1094" height="553" loading="lazy" decoding="async"></a></figure>
+</section>
+<p class="beat">Thought paralysis.</p>
+<section class="cs-item">
+<h3>I split users into groups.</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-112.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-112.webp" alt="I split users into groups." width="1600" height="530" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Identified tangible tasks</h3>
+<figure class="cs-fig" style="max-width:833px"><a href="/media/cs/crop-113.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-113.webp" alt="Identified Tangible Tasks" width="1111" height="599" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Started with user journeys</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-114.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-114.webp" alt="Started with User Journeys" width="1600" height="568" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>How would records talk?</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-115.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-115.webp" alt="How would records talk?" width="1600" height="547" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>User v. screen: a sticky problem</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-116.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-116.webp" alt="User v. screen - A sticky problem" width="1600" height="549" loading="lazy" decoding="async"></a></figure>
+</section>
+<h2>Early exploration</h2>
+<p class="beat">Quick and dirty.</p>
+<section class="cs-item">
+<h3>Exploration</h3>
+<figure class="cs-fig" style="max-width:658px"><a href="/media/cs/crop-118.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-118.webp" alt="Exploration" width="878" height="667" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>A new child record preview appears in the workflow</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-119.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-119.webp" alt="Other associated records. The workflow and heads-up area were not part of my design." width="1475" height="842" loading="lazy" decoding="async"></a><figcaption>Other associated records. The workflow and heads-up area were not part of my design.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Users can create an automation in settings</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-120.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-120.webp" alt="Conditions for child record creation." width="1560" height="779" loading="lazy" decoding="async"></a><figcaption>Conditions for child record creation.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Forms can be automated to share form field entries</h3>
+<figure class="cs-fig" style="max-width:844px"><a href="/media/cs/crop-121.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-121.webp" alt="Forms can be automated to share form field entries" width="1125" height="888" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Group records to create a project</h3>
+<figure class="cs-fig" style="max-width:832px"><a href="/media/cs/crop-122.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-122.webp" alt="Group records to create a project" width="1109" height="785" loading="lazy" decoding="async"></a></figure>
+</section>
+<h2>Planning</h2>
+<p class="beat">Pause to plan.</p>
+<section class="cs-item">
+<h3>Milestones and scope planning</h3>
+<figure class="cs-fig" style="max-width:1044px"><a href="/media/cs/crop-124.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-124.webp" alt="Milestones/Scope Planning" width="1392" height="667" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Everything needs to be a deck</h3>
+<figure class="cs-fig" style="max-width:898px"><a href="/media/cs/crop-125.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-125.webp" alt="Everything needs to be a deck endless and every step leads to a new possibilities are endless and every step l" width="1198" height="667" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>I used the word ‘buckets’ a lot</h3>
+<ol class="cs-ol"><li>Ad-hoc linked records</li><li>Automated linked records</li><li>Form mapping</li><li>Enhanced projects</li></ol>
+</section>
+<section class="cs-item">
+<h3>Team</h3>
+<p>1 Designer, 1 PM, 1 Front-end engineer, 1 Back-end engineer.</p>
+<figure class="cs-fig" style="max-width:818px"><a href="/media/cs/crop-127.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-127.webp" alt="Team Team 1 Designer" width="1090" height="680" loading="lazy" decoding="async"></a></figure>
+</section>
+<p class="beat">Parent-child relationships became Related Records.</p>
+<section class="cs-item">
+<h3>Design I’m most proud of.</h3>
+<figure class="cs-fig" style="max-width:382px"><a href="/media/cs/crop-129.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-129.webp" alt="Design I’m most proud of." width="510" height="610" loading="lazy" decoding="async"></a></figure>
+</section>
 <h2>Design: displaying related records</h2>
-<p>I compared a graph, a tree and a list. A full tree was overwhelming. A tree combined with a list was much easier to understand. I also had to decide where related records would live: in their own tab, or inside the workflow. I tested both in interviews.</p>
-<div class="grid g2">
-<figure><img src="/media/rr-134.webp" alt="Tree versus tree plus list: the full tree labelled overwhelming, the combined view labelled easier to understand"><figcaption>The full tree was overwhelming. Tree plus list was easier to understand.</figcaption></figure>
-<figure><img src="/media/rr-135.webp" alt="Two options for where associated records live: in a separate tab, or in the workflow with no tab"><figcaption>Two placements, both tested with users.</figcaption></figure>
-</div>
-<p>Where I landed: a separate tab with a count; quick filters that double as a legend; the upstream record pinned at the top; metadata reused from Global Search; and icons that show each relationship at a glance. I also designed for mobile and for records with more than one parent.</p>
-<figure><img src="/media/rr-141.webp" alt="Related Records on a phone, showing the record header, sort and filter controls and the related record tree"><figcaption>The same tree on mobile.</figcaption></figure>
-
+<p class="beat">Ok, back to work.</p>
+<section class="cs-item">
+<h3>UX micro-journeys</h3>
+<div class="cs-cols"><div><h4>Displaying related records</h4><p>1. Where would associated records live?<br>2. Graph v. list v. diagram</p></div><div><h4>Creating a relationship</h4><p>1. Relationship components<br>2. The setup<br>3. Page v. modal</p></div><div><h4>Relationship templates</h4><p>1. Automating a relationship<br>2. Data-mapping</p></div><div><h4>Projects</h4><p>1. How should we proceed?</p></div></div>
+</section>
+<section class="cs-item">
+<h3>Graph vs. tree vs. list</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-133.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-133.webp" alt="Graph vs. Tree vs. List" width="1460" height="763" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Tree + list</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-134.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-134.webp" alt="Overwhelming, and easier to understand." width="1600" height="530" loading="lazy" decoding="async"></a><figcaption>Overwhelming, and easier to understand.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Where would associated records live?</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-135.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-135.webp" alt="In a separate tab, or in the workflow with no tab." width="1589" height="676" loading="lazy" decoding="async"></a><figcaption>In a separate tab, or in the workflow with no tab.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Test both in our interviews.</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-136.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-136.webp" alt="Test both in our interviews. In a separate tab In the workflow, no tab" width="1600" height="676" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Explorations</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-137.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-137.webp" alt="Explorations" width="1600" height="361" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Where I landed</h3>
+<figure class="cs-fig" style="max-width:808px"><a href="/media/cs/crop-138.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-138.webp" alt="Where I landed" width="1078" height="768" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-139.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-139.webp" alt="A separate tab with a count, quick filters and a legend, the upstream record, metadata reused from Global Search, and icons that show each relationship at a glance." width="1529" height="768" loading="lazy" decoding="async"></a><figcaption>A separate tab with a count, quick filters and a legend, the upstream record, metadata reused from Global Search, and icons that show each relationship at a glance.</figcaption></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig" style="max-width:1019px"><a href="/media/cs/crop-140.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-140.webp" alt="Slide" width="1359" height="913" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Mobile</h3>
+<figure class="cs-fig" style="max-width:297px"><a href="/media/cs/crop-141.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-141.webp" alt="Mobile" width="396" height="765" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>What if there are multiple parents?</h3>
+<figure class="cs-fig" style="max-width:953px"><a href="/media/cs/crop-142.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-142.webp" alt="What if there are multiple parents?" width="1271" height="805" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Get details of a related record and its relationship</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-143.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-143.webp" alt="Get details of a related record and it’s relationship" width="1529" height="805" loading="lazy" decoding="async"></a></figure>
+</section>
 <h2>Design: creating a relationship</h2>
-<p>To create a relationship, the user needed to tell us five things: which record type, the conditions (for automated relationships only), who the users are, what information to copy, and which workflows depend on each other. After weighing a page against a modal, I landed on a guided setup:</p>
-<ul>
-<li>The empty state suggests records the user might want to quick-add.</li>
-<li>Picking a record type happens before the setup, not inside it.</li>
-<li>Step 1 sets when the relationship is created, right on the parent’s workflow.</li>
-<li>Step 2 copies users from the parent record by default, to give a head start.</li>
-<li>Step 3 picks which information to copy.</li>
-<li>Step 4 adds dependencies between workflows, with quick actions in the language users already use.</li>
-</ul>
-<div class="grid g2">
-<figure><img src="/media/rr-149.webp" alt="Setup step 1: when should this relationship be created, with the parent workflow shown on the right"><figcaption>Step 1: when should this relationship be created?</figcaption></figure>
-<figure><img src="/media/rr-152.webp" alt="Setup step 4: adding workflow blockers between records, with quick actions"><figcaption>Step 4: are there dependencies between the records?</figcaption></figure>
-</div>
-
+<section class="cs-item">
+<h3>We needed the user to tell us:</h3>
+<ol class="cs-ol"><li>Which record type?</li><li>Conditions (only for automated)</li><li>Who are the users?</li><li>Copy information?</li><li>Dependent workflows?</li></ol>
+</section>
+<section class="cs-item">
+<h3>Finalized: empty state</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-147.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-147.webp" alt="Showing records that the user might want to quick add." width="1575" height="804" loading="lazy" decoding="async"></a><figcaption>Showing records that the user might want to quick add.</figcaption></figure>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig"><a href="/media/cs/crop-148.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-148.webp" alt="Separated picking a record type from the modal experience." width="1600" height="778" loading="lazy" decoding="async"></a><figcaption>Separated picking a record type from the modal experience.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Step 1: When should this relationship be created?</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-149.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-149.webp" alt="Finalized - Step 1 - When should this relationship be created? Separated picking a Record Type from the modal " width="1600" height="777" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Step 2: Which users should be added to the record?</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-150.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-150.webp" alt="Users from the parent record are copied by default to give the user a head start. Quick actions below." width="1600" height="789" loading="lazy" decoding="async"></a><figcaption>Users from the parent record are copied by default to give the user a head start. Quick actions below.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>Step 3: Would the user like to copy any information?</h3>
+<figure class="cs-fig" style="max-width:850px"><a href="/media/cs/crop-151.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-151.webp" alt="Finalized - Step 3 - Would the user like to copy and information?" width="1134" height="805" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Step 4: Are there any dependencies between the records?</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-152.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-152.webp" alt="Showing the spot where the user added the relationship in step 1, and quick actions using prevalent lingo." width="1600" height="754" loading="lazy" decoding="async"></a><figcaption>Showing the spot where the user added the relationship in step 1, and quick actions using prevalent lingo.</figcaption></figure>
+</section>
 <h2>Validation</h2>
-<p>I ran five usability tests with five tasks each, using remote control so participants worked in the prototype themselves. Then the lead developer and I went to a customer user group in Worcester, MA, where a customer volunteered to set up a related record live. We were nervous. She set it up smoothly, talked through it as she went, and understood the UI.</p>
-
-<h2>Measuring success</h2>
-<p>This was a greenfield project, and many of the improvements are qualitative, so the metrics are still a work in progress. What we expect to see:</p>
-<ul>
-<li>Ad-hoc related records being created</li>
-<li>More relationship templates in larger communities</li>
-<li>Less use of combination permits</li>
-<li>Fewer calls and emails about requirements</li>
-<li>Faster processing of permits and licenses</li>
-</ul>
-<p>What we can measure: fewer workflow steps per record, fewer change requests, and time to complete a workflow step, tracked in Fullstory.</p>
-
+<p class="beat">My child is not pretty.</p>
+<section class="cs-item">
+<h3>Usability test</h3>
+<div class="stats cs-stats"><div><b>5</b><span>Interviews</span></div><div><b>5</b><span>Tasks</span></div></div>
+<figure class="cs-fig" style="max-width:820px"><a href="/media/cs/crop-154.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-154.webp" alt="Usability Test 5 5" width="1093" height="604" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>Live testing</h3>
+<p>The developer and I went to a user group where customers in an area gather to discuss best practices, hear updates and provide feedback. We had a customer volunteer to set up a related record live.</p>
+<p>To our delight, she could set it up pretty smoothly. She talked through the experience, and she could understand the UI well.</p>
+<figure class="cs-fig" style="max-width:599px"><a href="/media/cs/crop-156.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-156.webp" alt="Live Testing The developer and I went to a user group where customers in an area gather to discuss" width="799" height="667" loading="lazy" decoding="async"></a></figure>
+</section>
+<h2>Components and measuring success</h2>
+<section class="cs-item">
+<h3>Everything is a component</h3>
+<figure class="cs-fig"><a href="/media/cs/crop-157.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-157.webp" alt="Everything is a component" width="1600" height="627" loading="lazy" decoding="async"></a></figure>
+</section>
+<section class="cs-item">
+<h3>KPIs: the honest answer</h3>
+<p>This project is greenfield. In conversations with the PM, we also found that a lot of the improvements we are building are qualitative. This is the list we came up with, but it is still a work in progress.</p>
+<div class="cs-cols"><div><h4>What we expect</h4><p>1. Creation of ad-hoc related records<br>2. Creation of more relationship templates in larger communities<br>3. Reduction in use of combo-permits<br>4. Fewer questions about requirements via phone calls or emails<br>5. Faster processing of permits and licenses</p></div><div><h4>What we could measure</h4><p>1. Number of workflow steps in records (reduction is ideal)<br>2. Number of change requests (reduction is ideal)<br>3. Time to complete a workflow step (reduction is ideal, but we do not measure this today)<br><br>Tracked in Fullstory.</p></div></div>
+</section>
+<section class="cs-item cs-cont">
+<figure class="cs-fig" style="max-width:1036px"><a href="/media/cs/crop-159.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-159.webp" alt="Slide" width="1382" height="931" loading="lazy" decoding="async"></a></figure>
+</section>
 <h2>What’s next</h2>
-<p>Relationship templates and projects come next. Our users are creative, so we want to see how they use Related Records before we introduce projects. I’ve built an initial prototype and run a DIY project dashboard exercise with users.</p>
-
-<h2>Reflection</h2>
-<h3>What went well</h3>
-<ul>
-<li><strong>Collaboration:</strong> our PM changed mid-project, and the engineering lead and I kept the team stable and the work moving.</li>
-<li><strong>Iteration:</strong> four Figma files with hundreds of screens. Seeing where we started and where we ended up makes me happy.</li>
-<li><strong>Users understood it:</strong> in live testing, the customer flew through setting up a relationship.</li>
-</ul>
+<p class="beat">Relationship templates, then projects.</p>
+<p class="beat">Our users are creative. We want to observe how they use Related Records before we introduce projects.</p>
+<section class="cs-item">
+<h3>An initial prototype</h3>
+<figure class="cs-fig" style="max-width:764px"><a href="/media/cs/crop-164.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-164.webp" alt="Type of hurdle: UX + UI." width="1018" height="706" loading="lazy" decoding="async"></a><figcaption>Type of hurdle: UX + UI.</figcaption></figure>
+</section>
+<section class="cs-item">
+<h3>DIY project dashboard exercise</h3>
+<figure class="cs-fig" style="max-width:870px"><a href="/media/cs/crop-165.webp" target="_blank" rel="noopener"><img src="/media/cs/crop-165.webp" alt="DIY Project Dashboard Exercise endless and every step leads to a new possibilities are endless and every step " width="1160" height="550" loading="lazy" decoding="async"></a></figure>
+</section>
+<h2>Retro</h2>
+<section class="cs-item">
+<h3>Wins</h3>
+<div class="cs-cols"><div><h4>Stellar collaboration</h4><p>The PM on this project changed mid-project, and the engineering lead and I were able to keep the team stable and work flowing.</p></div><div><h4>Iterative designs</h4><p>I have 4 Figma files for this project, each with hundreds of screens. Seeing where we began and where the design is now makes me happy.</p></div><div><h4>Users understood the design</h4><p>Especially during the live testing, we were nervous. But the user flew through setting up a relationship.</p></div></div>
+</section>
+<section class="cs-item">
 <h3>What I’d do differently</h3>
-<ul>
-<li>Ask the UX team for feedback earlier and more often. It would have helped me refine designs faster.</li>
-<li>Break a very large project into smaller releases sooner.</li>
-<li>Document edge cases as I go.</li>
-</ul>
+<div class="cs-cols"><div><h4>More feedback from the UX team</h4><p>I could have proactively asked for more design feedback from the UX team. It would have helped me refine designs faster.</p></div><div><h4>A very large undertaking</h4><p>Break a very large project into smaller releases sooner.</p></div><div><h4>Documenting edge cases</h4><p>Document edge cases as I go.</p></div></div>
+</section>
 
 <nav aria-label="More case studies" style="display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #4A4B50">
-<a href="/global-search" style="text-decoration: none; flex: 1 1 16rem"><span style="display: block; color: #B4B6BF; font-size: 0.9rem">← Previous</span><span style="font-size: 1.4rem; font-weight: 700">Global Search</span></a>
-<a href="/the-design-thinking-program" style="text-decoration: none; flex: 1 1 16rem; text-align: right"><span style="display: block; color: #B4B6BF; font-size: 0.9rem">Next →</span><span style="font-size: 1.4rem; font-weight: 700">The Design Thinking Program</span></a>
+<a href="/global-search" style="text-decoration: none; flex: 1 1 16rem"><span style="display: block; color: #FFFFFF; font-size: 0.9rem">← Previous</span><span style="font-size: 1.4rem; font-weight: 700">Global Search</span></a>
+<a href="/the-design-thinking-program" style="text-decoration: none; flex: 1 1 16rem; text-align: right"><span style="display: block; color: #FFFFFF; font-size: 0.9rem">Next →</span><span style="font-size: 1.4rem; font-weight: 700">The Design Thinking Program</span></a>
 </nav>
 
 </article>

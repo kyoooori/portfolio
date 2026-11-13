@@ -8,42 +8,42 @@
 <link rel="icon" href="/media/logo-hand.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#2B2B2B}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:3px solid #9BA3FF;outline-offset:3px}
 .role{display:grid;grid-template-columns:12rem minmax(0,1fr);gap:1.5rem;padding:1.5rem 0;border-top:1px solid #4A4B50}
-.role p{margin:.4rem 0 0;color:#B4B6BF}
+.role p{margin:.4rem 0 0;color:#FFFFFF}
 .role b{font-size:1.25rem;font-weight:500}
-.sec{margin:3.5rem 0 .5rem;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-size:1.5rem;font-weight:500;letter-spacing:-.01em;color:#F2F2F2}
+.sec{margin:3.5rem 0 .5rem;font-family:'Geist',system-ui,sans-serif;font-size:1.5rem;font-weight:500;letter-spacing:-.01em;color:#FFFFFF}
 .side{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;padding:1.5rem 0;border-top:1px solid #4A4B50}
-.side h3{margin:0 0 .5rem;font-size:1rem;font-weight:600;color:#F2F2F2}
-.side p{margin:0;color:#B4B6BF}
-.dl{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 1.25rem;background:#FDCFF3;color:#15171F;text-decoration:none;font-weight:600;transition:background-color .2s}
+.side h3{margin:0 0 .5rem;font-size:1rem;font-weight:600;color:#FFFFFF}
+.side p{margin:0;color:#FFFFFF}
+.dl{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 1.25rem;background:#FDCFF3;color:#000000;text-decoration:none;font-weight:600;transition:background-color .2s}
 .dl:hover{background:#F7A8E4}
 @media(max-width:700px){.side{grid-template-columns:1fr}}
 @media(max-width:700px){.role{grid-template-columns:1fr;gap:.25rem}}
 
-.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Inter',system-ui,sans-serif;font-size:18px;font-weight:300;color:#F2F2F2}
+.site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:300;color:#FFFFFF}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-.site-header .name{text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#F2F2F2}
+.site-header .name{text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-weight:500;font-style:normal;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:#FFFFFF}
 .menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
 .menu-btn .trig{position:relative;display:block;width:87px;height:60px}
-.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#F2F2F2}
+.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#FFFFFF}
 .site-header.light .menu-btn .trig i{background:#37383F}
 .menu-btn .trig img{position:absolute;left:15.6px;top:5px;width:65px;height:41px;display:block}
 .site-menu{position:absolute;top:96px;right:clamp(1.25rem,5vw,4rem);width:280px;display:flex;flex-direction:column;padding:0;background:#2B2B2B;border:1px solid #55527E;border-radius:0;box-shadow:0 12px 32px rgba(0,0,0,.10)}
 .site-menu[hidden]{display:none}
-.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Inter Tight','Inter',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#F2F2F2;transition:background-color .2s}
+.site-menu a{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid #55527E;text-decoration:none;font-family:'Geist',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:-.015em;color:#FFFFFF;transition:background-color .2s}
 .site-menu a:last-child{border-bottom:0}
 .site-menu a::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:transparent}
 .site-menu a[aria-current="page"]::before{background:#F7A8E4}
-.site-menu a:hover{background:#FDCFF3;color:#15171F}
-.site-header.light{color:#15171F;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
-.site-header.light .name{color:#15171F}
+.site-menu a:hover{background:#FDCFF3;color:#000000}
+.site-header.light{color:#000000;background:#FFFFFF;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.site-header.light .name{color:#000000}
 .site-header.light .site-menu{background:#FFFCF5;border-color:#E2E3EA}
-.site-header.light .site-menu a{color:#15171F;border-color:#E2E3EA}
+.site-header.light .site-menu a{color:#000000;border-color:#E2E3EA}
 .site-header.light .site-menu a:hover{background:#FDCFF3}
 body{overflow-wrap:break-word}
 main{overflow-x:clip}
@@ -52,14 +52,14 @@ main{overflow-x:clip}
 </style>
 </head>
 <body>
-<div style="min-height: 100vh; background: #2B2B2B; color: #F2F2F2; font-family: 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.6; font-weight: 300">
+<div style="min-height: 100vh; background: #2B2B2B; color: #FFFFFF; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; line-height: 1.6; font-weight: 300">
 <header class="site-header"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:13px"></i><i style="top:21px"></i><i style="top:29px"></i><img src="/media/menu-hand.png" alt=""></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/">Case Studies</a><a href="/about">About Me</a><a href="/resume" aria-current="page">Resume</a><a href="/other-things">Other Things</a></nav></header>
 <main style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem">
 <article style="max-width: 56rem; margin-top: 3rem">
 <div style="display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1rem">
 <div>
 
-<p style="margin: 1rem 0 0; color: #B4B6BF">Staff Product Designer · San Francisco Bay Area</p>
+<p style="margin: 1rem 0 0; color: #FFFFFF">Staff Product Designer · San Francisco Bay Area</p>
 </div>
 <a class="dl" href="/media/Keyuri-Tatu-Resume.pdf" download="Keyuri-Tatu-Resume.pdf">
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="M7 10l5 5 5-5"></path><path d="M5 21h14"></path></svg>
@@ -69,41 +69,41 @@ Download PDF
 
 <h2 class="sec">Work</h2>
 <div class="role">
-<div style="color: #B4B6BF">3 mos. (current)</div>
+<div style="color: #FFFFFF">3 mos. (current)</div>
 <div><b>Staff Product Designer, OpenGov</b><p>Leading design for inspection scheduling (rebuilt for 10K+ public users) and dispatch system (pilot with SF County); architected reusable scheduling patterns.</p></div>
 </div>
 <div class="role">
-<div style="color: #B4B6BF">1 yr. 7 mos.</div>
+<div style="color: #FFFFFF">1 yr. 7 mos.</div>
 <div><b>Lead Product Designer, OpenGov</b><p>Designed global search pattern adopted across 3 products; authored component specs for permit relationship modeling (complex data structure); led form-builder design serving 500+ government agencies.</p></div>
 </div>
 <div class="role">
-<div style="color: #B4B6BF">2.5 yrs.</div>
+<div style="color: #FFFFFF">2.5 yrs.</div>
 <div><b>Sr. Product Designer, OpenGov</b><p>Conducted research across 20+ government agencies to define Permitting &amp; Licensing roadmap; designed 8+ features (from research → spec → ship).</p></div>
 </div>
 <div class="role">
-<div style="color: #B4B6BF">2 yrs.</div>
+<div style="color: #FFFFFF">2 yrs.</div>
 <div><b>Interaction Designer, Wabtec</b><p>Led design system strategy for GE Transportation (200+ engineers, 5 products); designed AI inspection app (PoC → shipped); set WCAG 2.1 AA accessibility standards.</p></div>
 </div>
 <div class="role">
-<div style="color: #B4B6BF">9 mos.</div>
+<div style="color: #FFFFFF">9 mos.</div>
 <div><b>UX Researcher, GE Transportation’s Innovation Lab</b><p>Conducted contextual research for “Yard of the Future” initiative; designed and validated ML Inspection App UI (shipped pilot); facilitated 6 design thinking workshops with internal stakeholders.</p></div>
 </div>
 <div class="role">
-<div style="color: #B4B6BF">2 yrs.</div>
+<div style="color: #FFFFFF">2 yrs.</div>
 <div><b>Graphic Designer, The Republic &amp; Elephant Design+Strat. (India)</b><p>Branding for Mumbai restaurants (Fatty Bao, Olive Bistro); packaging visuals for Paperboat, Tiger biscuits, Britannia.</p></div>
 </div>
 
 <h2 class="sec">Education</h2>
 <div class="role">
-<div style="color: #B4B6BF">June 2018</div>
+<div style="color: #FFFFFF">June 2018</div>
 <div><b>M.A. Graphic Design and Visual Experience</b><p>Savannah College of Art and Design, Atlanta</p></div>
 </div>
 <div class="role">
-<div style="color: #B4B6BF">2015</div>
+<div style="color: #FFFFFF">2015</div>
 <div><b>Communication Design Graduate</b><p>MIT Institute of Design, India</p></div>
 </div>
 <div class="role">
-<div style="color: #B4B6BF">2015</div>
+<div style="color: #FFFFFF">2015</div>
 <div><b>Bachelor of Arts (English)</b><p>Pune University (India)</p></div>
 </div>
 
