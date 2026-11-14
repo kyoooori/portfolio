@@ -27,10 +27,11 @@ figcaption{margin-top:.6rem;color:#FFFFFF;font-size:.9rem}
 
 .site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:300;color:#FFFFFF}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-.site-header .name{text-decoration:none;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-style:italic;font-size:25px;line-height:1.1;letter-spacing:-.01em;color:#FFFFFF}
-.menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
-.menu-btn .trig{position:relative;display:block;width:87px;height:60px}
-.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#FFFFFF}
+.site-header .name{display:flex;align-items:center;gap:14px;text-decoration:none;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-style:italic;font-size:25px;line-height:1.1;letter-spacing:-.01em;color:#FFFFFF}
+.site-header .name img{width:52px;height:33px;display:block}
+.menu-btn{display:block;background:transparent;border:0;padding:11px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
+.menu-btn .trig{position:relative;display:block;width:32px;height:22px}
+.menu-btn .trig i{position:absolute;left:1px;width:30px;height:3px;border-radius:2px;background:#FFFFFF}
 .site-header.light .menu-btn .trig i{background:#37383F}
 .menu-btn .trig img{position:absolute;left:15.6px;top:5px;width:65px;height:41px;display:block}
 .site-menu{position:absolute;top:96px;right:clamp(1.25rem,5vw,4rem);width:280px;display:flex;flex-direction:column;padding:0;background:#2B2B2B;border:1px solid #55527E;border-radius:0;box-shadow:0 12px 32px rgba(0,0,0,.10)}
@@ -54,7 +55,7 @@ main{overflow-x:clip}
 <body>
 <div style="min-height: 100vh; background: #2B2B2B; color: #FFFFFF; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; line-height: 1.6; font-weight: 300">
 <div class="hero" style="background: #FFFCF5; color: #000000">
-<header class="site-header light"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:13px"></i><i style="top:21px"></i><i style="top:29px"></i><img src="/media/menu-hand.png" alt=""></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
+<header class="site-header light"><a class="name" href="/" aria-label="Keyuri Tatu, home"><img src="/media/menu-hand.png" alt=""><span>Keyuri Tatu</span></a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:2px"></i><i style="top:10px"></i><i style="top:18px"></i></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header>
 <div style="padding: 3rem clamp(1.25rem, 5vw, 4rem) 3.5rem">
 <div style="max-width: 68rem">
 <span style="color: #000000; font-weight: 600">2019–20</span>

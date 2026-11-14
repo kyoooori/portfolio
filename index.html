@@ -57,10 +57,11 @@ a:focus-visible{outline:3px solid #3340F0;outline-offset:-3px}
 
 .site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:300;color:#FFFFFF}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-.site-header .name{text-decoration:none;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-style:italic;font-size:25px;line-height:1.1;letter-spacing:-.01em;color:#FFFFFF}
-.menu-btn{display:block;background:transparent;border:0;padding:4px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
-.menu-btn .trig{position:relative;display:block;width:87px;height:60px}
-.menu-btn .trig i{position:absolute;left:11px;width:30px;height:3.8px;border-radius:2px;background:#FFFFFF}
+.site-header .name{display:flex;align-items:center;gap:14px;text-decoration:none;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-style:italic;font-size:25px;line-height:1.1;letter-spacing:-.01em;color:#FFFFFF}
+.site-header .name img{width:52px;height:33px;display:block}
+.menu-btn{display:block;background:transparent;border:0;padding:11px 6px;border-radius:12px;cursor:pointer;line-height:0;min-width:44px;min-height:44px}
+.menu-btn .trig{position:relative;display:block;width:32px;height:22px}
+.menu-btn .trig i{position:absolute;left:1px;width:30px;height:3px;border-radius:2px;background:#FFFFFF}
 .site-header.light .menu-btn .trig i{background:#37383F}
 .menu-btn .trig img{position:absolute;left:15.6px;top:5px;width:65px;height:41px;display:block}
 .site-menu{position:absolute;top:96px;right:clamp(1.25rem,5vw,4rem);width:280px;display:flex;flex-direction:column;padding:0;background:#2B2B2B;border:1px solid #55527E;border-radius:0;box-shadow:0 12px 32px rgba(0,0,0,.10)}
@@ -83,18 +84,18 @@ main{overflow-x:clip}
 </head>
 <body>
 <div style="min-height: 100vh; background: #FFFCF5; color: #000000; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; line-height: 1.6; font-weight: 300">
-<div style="position: relative; z-index: 20; background-color: #FFFFFF"><header class="site-header light"><a class="name" href="/">Keyuri Tatu</a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:13px"></i><i style="top:21px"></i><i style="top:29px"></i><img src="/media/menu-hand.png" alt=""></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header></div>
+<div style="position: relative; z-index: 20; background-color: #FFFFFF"><header class="site-header light"><a class="name" href="/" aria-label="Keyuri Tatu, home"><img src="/media/menu-hand.png" alt=""><span>Keyuri Tatu</span></a><button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span class="trig"><i style="top:2px"></i><i style="top:10px"></i><i style="top:18px"></i></span></button><nav id="site-menu" class="site-menu" aria-label="Site" hidden><a href="/" aria-current="page">Case Studies</a><a href="/about">About Me</a><a href="/resume">Resume</a><a href="/other-things">Other Things</a></nav></header></div>
 <main style="padding: 0 0 6rem; min-height: 3510px; padding-bottom: 0rem; min-height: 4126px">
-<div style="padding: 0 clamp(1.25rem, 5vw, 4rem); margin-top: 0px; margin-bottom: 0px; min-height: 590px">
+<div style="padding: 0 clamp(1.25rem, 5vw, 4rem); margin-top: 0px; margin-bottom: 0px; min-height: 717px">
 <h1 class="sr-only">Keyuri Tatu, product designer</h1>
-<div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0px"><div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; min-height: 493px"><p style="max-width: 75%; margin: 3.5rem 0 0; color: #000000; font-family: 'Playfair Display', Georgia, serif; font-size: 24px; line-height: 1.4; width: 75%; font-weight: 400; letter-spacing: 0.5px"><br></p><h1 style="margin: 0 0 2rem; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-style: normal; font-size: clamp(2.4rem, 5.2vw, 4.5rem); line-height: 1.05; letter-spacing: -0.025em; max-width: 75%; width: 1231px; margin-bottom: 2.25rem">I have 11 years of experience. Currently, I untangle complex systems for local and state governments and the residents who use them.</h1></div></div>
+<div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0px"><div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; min-height: 596px"><p style="max-width: 75%; margin: 3.5rem 0 0; color: #000000; font-family: 'Playfair Display', Georgia, serif; font-size: 24px; line-height: 1.4; width: 75%; font-weight: 400; letter-spacing: 0.5px"><br></p><h1 style="margin: 0 0 2rem; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-style: normal; font-size: 68px; line-height: 1.05; letter-spacing: -0.025em; max-width: 75%; width: 1231px; margin-bottom: 2.25rem">I design end-to-end experiences rooted in human connection.&nbsp; I have 11 years of experience, currently untangling complex systems for local and state governments and the residents who use them.</h1></div></div>
 <h2 id="work" style="margin: clamp(5rem, 10vw, 8.5rem) 0 0; font-family: 'Geist', system-ui, sans-serif; font-weight: 500; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.025em; font-style: normal"><br></h2>
 </div>
 
 
 
 <div class="facts" aria-label="Highlights">
-<span class="fact"><b style="font-size: 40px; color: #000000; font-weight: 600">Case Studies</b></span><span class="fact"></span>
+<span class="fact"><b style="font-size: 40px; color: rgb(0, 0, 0); font-weight: 600">Some of my favorite work</b></span><span class="fact"></span>
 </div>
 
 <div class="cards" style="border-top: 1px solid #E2E3EA; border-left: 1px solid #E2E3EA">
@@ -115,7 +116,7 @@ main{overflow-x:clip}
 <a class="card" href="/inspections" style="display: flex; flex-direction: column; text-decoration: none; border-right: 1px solid #E2E3EA; border-bottom: 1px solid #E2E3EA">
 <div style="padding: 40px; border-bottom: 1px solid #E2E3EA">
 <div class="shot a-shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #A9B8A6">
-<img src="/media/thumb-inspections-crop.webp" alt="The Capacity Planning screen in a browser window: slots filled, free slots and districts at capacity, with the Tenderloin district's inspectors" >
+<img src="/media/thumb-inspections-crop.webp" alt="The Capacity Planning screen in a browser window: slots filled, free slots and districts at capacity, with the Tenderloin district's inspectors">
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
@@ -128,7 +129,7 @@ main{overflow-x:clip}
 <a class="card" href="/global-search" style="display: flex; flex-direction: column; text-decoration: none; border-right: 1px solid #E2E3EA; border-bottom: 1px solid #E2E3EA">
 <div style="padding: 40px; border-bottom: 1px solid #E2E3EA">
 <div class="shot a-shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #A7B1C2">
-<img src="/media/thumb-search-crop.webp" alt="Global search in a browser window: a search box with filters for records, locations, people and projects, above recently viewed items" >
+<img src="/media/thumb-search-crop.webp" alt="Global search in a browser window: a search box with filters for records, locations, people and projects, above recently viewed items">
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
@@ -142,7 +143,7 @@ main{overflow-x:clip}
 <a class="card" href="/related-records" style="display: flex; flex-direction: column; text-decoration: none; border-right: 1px solid #E2E3EA; border-bottom: 1px solid #E2E3EA">
 <div style="padding: 40px; border-bottom: 1px solid #E2E3EA">
 <div class="shot a-shot" style="aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; background: #C9A68E">
-<img src="/media/thumb-related-crop.webp" alt="Related Records in a browser window: a tree of connected permits with filters for shared information, blocking and waiting records" >
+<img src="/media/thumb-related-crop.webp" alt="Related Records in a browser window: a tree of connected permits with filters for shared information, blocking and waiting records">
 </div>
 </div>
 <div style="padding: 40px; display: flex; flex-direction: column; gap: 0.6rem; flex: 1">
