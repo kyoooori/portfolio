@@ -66,6 +66,11 @@ h2+.beat{margin-top:0}
 .cs-cols p{margin:0;font-size:1rem;line-height:1.65}
 .cs-item blockquote{max-width:40rem;margin:2.25rem 0}
 @media(max-width:600px){.cs-grid2{grid-template-columns:1fr}.beat{margin:4.5rem 0 3rem}article h2{margin-top:6rem}.cs-item{margin-bottom:5rem}.cs-item+.cs-item.cs-cont{margin-top:-3rem}}
+main{overflow-x:clip}
+.bw{--w:min(100%,68rem);position:relative;width:calc(var(--w) * 1.3993);margin:calc(var(--w) * -0.05) 0 calc(var(--w) * -0.21) calc(var(--w) * -0.0493)}
+.bw>img{display:block;width:100%;height:auto;pointer-events:none}
+.bw-screen{position:absolute;left:3.524%;top:9.615%;width:71.465%;height:57.03%;overflow:hidden;border-radius:0 0 .9% .9% / 0 0 1.45% 1.45%;background:#000}
+.bw-screen video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0}
 
 .site-header{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,4rem);font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:300;color:#FFFFFF}
 @font-face{font-family:"My Hand";src:url("/fonts/MyHand.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
@@ -116,6 +121,7 @@ main>div:first-child h1:not(.sr-only){font-size:clamp(2rem,4.4vw,60px)!important
 </div>
 <main style="padding: 0 clamp(1.25rem, 5vw, 4rem) 6rem; margin-top: 120px">
 <article style="max-width: 68rem; margin-top: 0.5rem">
+<figure class="bw"><img src="/media/rr-browser-window.webp" alt="" width="2400" height="1804"><div class="bw-screen"><video autoplay loop muted playsinline preload="metadata" poster="/media/rr-demo-poster.webp" aria-label="Screen recording of Related Records: viewing a permit's related records, adding a new related record, scheduling it, choosing users, copying information and adding workflow blockers"><source src="/media/rr-demo.mp4" type="video/mp4"></video></div></figure>
 
 <figure><img src="/media/rr-139.webp" alt="The Related Records tab on a building permit, annotated: a separate tab with a count, quick filters and a legend, the upstream record, metadata reused from Global Search, and icons that show each relationship at a glance"><figcaption>Where I landed: a Related Records tab that shows a record’s parents and children as a tree.</figcaption></figure>
 
